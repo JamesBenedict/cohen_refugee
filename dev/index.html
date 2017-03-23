@@ -9,28 +9,28 @@
 
 	<title>Cohen refugees</title>
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/leaflet.css">
 	<link rel="stylesheet" href="css/sankey.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lato:300,400,700,900" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
 
 </head>
-<body id ="container">
-<!-- <svg id="chart" width="960" height="500">
-	viewBox="0 0 960 500"
-	preserveAspectRatio = ''
-</svg> -->
-<!-- <p id="chart"> -->
-<h1>wtf</h1>
-<h2>seriously</h2>
-<p>yo</p>
-<article>
-	<div class="intro">
-		<h1>Intro yo</h1>
+<body>
+<h1>Context behind Broken Men in Paradise</h1>
+
+
+	<div id="intro">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare egestas mi at elementum. Curabitur consectetur magna congue, tempus ante malesuada, laoreet libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque tristique efficitur sagittis. Nullam at mi mi. Aenean libero quam, molestie sed magna non, maximus consectetur urna. Morbi mauris ipsum, bibendum eu risus sit amet, tristique faucibus risus. Nulla bibendum, purus ut sodales pellentesque, erat justo iaculis odio, sit amet pellentesque turpis felis sed elit.</p>
 	</div>
 
+	<div id="map"> </div>
+	
+
+
+
 	<div id="data">
-		<h1>Data</h1>
+		
 		<div id="chart"></div>
 		<!-- <svg id="chart" width="960" height="500">
 			viewBox="0 0 960 500"
@@ -38,36 +38,22 @@
 		</svg> -->
 	</div>
 	
-</article>
+<!-- 
 
-<aside>
-	<div class="map">
-		<h1>Map</h1>
-	</div>
-
-	<div class="info">
-		<h1>Info</h1>
-	</div>
-</aside>
-
+<div class="circles-parent">
+   <div class="circle"></div>
+   <div class="circle"></div>
+   <div class="circle"></div>
+</div>
+ -->
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="http://d3js.org/d3.v3.js"></script>
 <script src="js/d3-ring-note.js"></script>
 <script src="js/sankey.js"></script>
-<script src="js/app.js"</script>
-<script>
-	var chart = $("#chart"),
-    aspect = chart.width() / chart.height(),
-    container = chart.parent()
+<script src="js/app.js"></script>
+<script src="js/leaflet.js"></script>
 
-    
-$(window).on("resize", function() {
-    var targetWidth = container.width();
-    chart.attr("width", targetWidth);
-    chart.attr("height", Math.round(targetWidth / aspect));
-}).trigger("resize");
-
-</script>
+<script src="js/map.js"></script>
 
 
 <script>

@@ -35,10 +35,11 @@ var annotations = [
   }
 ]
 var units = "People";
- 
+
+h = $('#data').height();
 var margin = {top: 10, right: 10, bottom: 10, left: 10},
     width = 1200 - margin.left - margin.right,
-    height = 740 - margin.top - margin.bottom;
+    height = 500 - margin.top - margin.bottom;
  
 var formatNumber = d3.format(",.0f"),    // zero decimal places
     format = function(d) { return formatNumber(d) + " " + units; };
@@ -46,15 +47,15 @@ var formatNumber = d3.format(",.0f"),    // zero decimal places
 
  // append the svg canvas to the page
 var svg = d3.select("#chart")
-    .classed("svg-container", true)
-    .append("svg")
-   .attr("preserveAspectRatio", "xMinYMin meet")
-   .attr("viewBox", "0 0 1200 740")
-      .classed("svg-content-responsive", true)
+  .classed("svg-container", true)
+  .append("svg")
+  .attr("preserveAspectRatio", "xMinYMin meet")
+  .attr("viewBox", "0 0 1200 500")
+  .classed("svg-content-responsive", true)
 
   .append("g")
-    .attr("transform", 
-          "translate(" + margin.left + "," + margin.top + ")");
+  .attr("transform", 
+      "translate(" + margin.left + "," + margin.top + ")");
 
 
 
@@ -148,12 +149,12 @@ d3.json("data.json", function(error, graph) {
 
   // add in the annotations
 
-  var gAnnotations = svg.append("g")
-    .attr("class", "annotations")
-    .call(ringNote, annotations);
+  // var gAnnotations = svg.append("g")
+  //   .attr("class", "annotations")
+  //   .call(ringNote, annotations);
   
-  gAnnotations.selectAll(".annotation circle")
-    .classed("hidden", function(d) { return d.hideCircle; });
+  // gAnnotations.selectAll(".annotation circle")
+  //   .classed("hidden", function(d) { return d.hideCircle; });
 
 // the function for moving the nodes
   // function dragmove(d) {
