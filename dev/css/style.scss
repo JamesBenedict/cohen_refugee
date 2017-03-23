@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+// @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 @import 'imports.scss';
+// @import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
 
 html{
 	font-family: 'Lato', sans-serif;
 	background-color: $light-gray;
-	padding: 5%;
+	padding: 2%;
 }
 
 body{
-	padding: 10% 5% 10% 5%;
+	padding: 5% 2% 5% 2%;
 	background-color: white;
 	border: 1px solid $border-gray;
 	border-bottom: 3px solid $border-bottom;
 	border-radius: 4px;
 	color: #333;
-
 }
 
 article, aside{
@@ -25,46 +25,25 @@ article, aside{
 article{
 	width: 70%;
 	margin-right: 5%;
-
 }
 aside{
 	width: 20%;
 }
-.intro, .data, .map, .info {
-	height: 200px;
-	margin-bottom: 2em;
-}
-
-.intro{
-	background-color: purple;
-}
-
-.data{
-	width: 100%;
-	background-color: blue;
-}
-
-.map{
-	background-color: green;
-}
-
-.info{
-	background-color: red;
-}
 
 
 h1,h2,h3,h4{
+
 	margin-bottom: .5em;
 }
 
 h1{
-	font-size: 2em;
-	font-weight: 900;	
-	color: white;
+	font-family: 'Abril Fatface', cursive;
+	font-size: 10em;
+	font-weight: 900;		
 }
 
 h2{
-	font-size: 1.5em;
+	font-size: 1em;
 	font-weight: 300;
 }
 
@@ -79,7 +58,7 @@ h4{
 }
 
 p{
-	font-size: 1em;
+	font-size: 18px;
 	line-height: 1.5em;
 	margin-bottom: 1em;
 	font-weight: 300;
@@ -107,6 +86,32 @@ a{
 	text-decoration: none;
 }
 
+.intro, .data, .map, .info {
+	height: 200px;
+	margin-bottom: 2em;
+}
+
+.intro{
+	background-color: purple;
+}
+
+#data{
+	width: 100%;
+	height: 100%;
+	min-height: 500px;
+}
+
+.map{
+	background-color: green;
+}
+
+.info{
+	background-color: red;
+}
+.sankey{
+	
+}
+
 
 // small
 @media (min-width: $sm-min){
@@ -124,4 +129,5 @@ a{
 @media (min-width: $lg-min){
 	
 }
+
 
