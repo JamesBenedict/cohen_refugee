@@ -1,4 +1,76 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Movement through Manus and Nauru</title>
+<style>
  
+.node rect {
+  cursor: move;
+  fill-opacity: .9;
+  shape-rendering: crispEdges;
+}
+ 
+.node text {
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 80%;
+}
+ 
+.link {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .2;
+}
+ 
+.link:hover {
+  stroke-opacity: .5;
+}
+
+g.node rect {
+
+  fill: rgba(14,21,49, 1); /* or whatever color */
+
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 150%;
+  padding-left: 10px;
+
+}
+
+.annotation circle {
+  fill: rgba(102, 255, 255, .2);
+  stroke: black;
+}
+
+
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* aspect ratio */
+    vertical-align: top;
+    overflow: hidden;
+}
+.svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+
+</style>
+<body>
+ 
+<p id="chart">
+
+<script src="http://d3js.org/d3.v3.js"></script>
+<script src="sankey.js"></script>
+<script src="d3-ring-note.js"></script>
+<script>
+  
 var annotations = [{"cx":17.40363484621048,"cy":50,"r":0,"text":"Refugees/asylum seekers by country. Statistics provided by DIBP Senate inquiries.","textWidth":200,"textOffset":[61.26542091369629,-59.050601959228516]},{"cx":374.68655440211296,"cy":137.34067665738985,"r":0,"text":"Two main offshore processing centres: Nauru, and Manus, located in Papua New Guinea.","textWidth":200,"textOffset":[117.27906322479248,-118.16809844970703]},{"cx":1083.682068912778,"cy":20.914302349090576,"r":0,"text":"Current location","textWidth":200,"textOffset":[0.3270440101623535,-36.85076141357422]},{"cx":728.0258964002132,"cy":92.05903187394142,"r":0,"text":"1,876 people in offshore proeccessing centres at end of 2015.","textWidth":200,"textOffset":[67.91112697124481,-68.8001320362091]}];
 
 var units = "People";
@@ -92,7 +164,7 @@ d3.json("data.json", function(error, graph) {
       .attr("width", sankey.nodeWidth())
       // .style("fill", 
 
-      //  function(d) { 
+      // 	function(d) { 
       // return d.color = color(d.name.replace(/ .*/, "")); })
       .style("stroke", function(d) { 
       return d3.rgb(d.color).darker(2); })
@@ -141,71 +213,10 @@ d3.json("data.json", function(error, graph) {
 });
 
 
-// James's code
-var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/150dDKz8FAgSm_yv7LB7kMV1N37XTWXOASZn1gd63M00/pubhtml';
-
-      
-        
-function showInfo(data, tabletop) {
-  var source   = $("#intro-template").html();
-  var template = Handlebars.compile(source);
-
-  $.each( tabletop.sheets("Intro").all(), function(i, work) {
-    var html = template(work);
-    $("#intro-content").append(html);
-  });
-
-  map();
-}
-
-
-    // http://leaflet-extras.github.io/leaflet-providers/preview/index.html
-function map(){
-  var map = L.map('map', {scrollWheelZoom:false}).setView([-15.033631, 140.279410], 3);
-  new L.TileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}').addTo(map);
-  var createLabelIcon = function(labelClass,labelText){
-    return L.divIcon({ 
-      className: labelClass,
-      html: labelText
-    })
-  }
-
-  L.marker(new L.LatLng(-1.833631, 146.9), {icon:createLabelIcon("textLabelclass","Manus")}).addTo(map);
-  L.marker(new L.LatLng(-0.421969, 166.8930322), {icon:createLabelIcon("textLabelclass","Nauru")}).addTo(map);    
-}
- 
-
-    
-function refugeeMap(){
-  var map2 = L.map('refugeeMap', {scrollWheelZoom:false}).setView([16.381008, 67.080770], 4);
-  new L.TileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}').addTo(map2);
-  var createLabelIcon = function(labelClass,labelText){
-    return L.divIcon({ 
-      className: labelClass,
-      html: labelText
-    })
-  }
-
-  L.marker(new L.LatLng(-1.833631, 146.9), {icon:createLabelIcon("textLabelclass","Manus")}).addTo(map2);
-  L.marker(new L.LatLng(-0.421969, 166.8930322), {icon:createLabelIcon("textLabelclass","Nauru")}).addTo(map2);    
-}
-
-
-
-$(document).ready( function() {
-  Tabletop.init( { key: public_spreadsheet_url,
-    callback: showInfo,
-    parseNumbers: true } );
-  refugeeMap();
-
-
-
-
-});
-
-
-
-
 
 
  
+</script>
+ 
+</body>
+</html>

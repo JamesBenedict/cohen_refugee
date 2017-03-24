@@ -8,6 +8,7 @@
 .node text {
   pointer-events: none;
   text-shadow: 0 1px 0 #fff;
+  font-family: 'Open Sans', sans-serif;
   font-size: 80%;
 }
  
@@ -44,14 +45,50 @@ g.node rect {
     display: inline-block;
     position: relative;
     width: 100%;
-    padding-bottom: 100%; /* aspect ratio */
-    
+    padding-bottom: 50%; /* aspect ratio */
     vertical-align: top;
     overflow: hidden;
 }
-.svg-content-responsive {
+/*.svg-content-responsive {
     display: inline-block;
     position: absolute;
     top: 10px;
     left: 0;
+}*/
+
+
+
+#donut{
+/*  background-color: red;
+*/  width: 50%;
+ 
+
+}
+
+#donut-chart{
+/*  width: 50%;
+*/}
+/*#donut-charts{
+  background-color: blue;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 5000em;
+  left: 0;
+}*/
+
+
+.svg-content {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#donut-charts {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 3%; /* aspect ratio */
+    vertical-align: middle;
+    overflow: hidden;
 }

@@ -2,72 +2,72 @@
   "links": [
   {
     "source": "People from Afghanistan",
-    "target": "Manus",
+    "target": "PNG",
     "value": "135"
   },
   {
     "source": "People from Bangladesh",
-    "target": "Manus",
+    "target": "PNG",
     "value": "74"
   },
   {
     "source": "People from India",
-    "target": "Manus",
+    "target": "PNG",
     "value": "13"
   },
   {
     "source": "People from Iran",
-    "target": "Manus",
+    "target": "PNG",
     "value": "548"
   },
   {
     "source": "People from Iraq",
-    "target": "Manus",
+    "target": "PNG",
     "value": "106"
   },
   {
     "source": "People from Lebanon",
-    "target": "Manus",
+    "target": "PNG",
     "value": "46"
   },
   {
     "source": "People from Myanmar",
-    "target": "Manus",
+    "target": "PNG",
     "value": "53"
   },
   {
     "source": "People from Myanmar (Stateless)",
-    "target": "Manus",
+    "target": "PNG",
     "value": "13"
   },
   {
     "source": "People from Nepal",
-    "target": "Manus",
+    "target": "PNG",
     "value": "19"
   },
   {
     "source": "People from Pakistan",
-    "target": "Manus",
+    "target": "PNG",
     "value": "105"
   },
   {
     "source": "People from Somalia",
-    "target": "Manus",
+    "target": "PNG",
     "value": "48"
   },
   {
     "source": "People from Sri Lanka",
-    "target": "Manus",
+    "target": "PNG",
     "value": "27"
   },
   {
     "source": "Stateless People",
-    "target": "Manus",
+    "target": "PNG",
     "value": "41"
   },
   {
     "source": "Other People",
-    "target": "Manus",
+    "target": "PNG",
     "value": "18"
   },
   {
@@ -131,7 +131,7 @@
     "value": "13"
   },
   {
-    "source": "Manus",
+    "source": "PNG",
     "target": "Total Asylum Seekers",
     "value": "1246"
   },
@@ -221,7 +221,7 @@
     "value": "29"
   },
   { "source": "Total Asylum Seekers",
-    "target": "Still on Manus or Nauru",
+    "target": "Still on PNG or Nauru",
     "value": "1215" 
   },
   {
@@ -275,7 +275,7 @@
     "name": "Other People"
   },
   {
-    "name": "Manus"
+    "name": "PNG"
   },
   {
     "name": "Nauru"
@@ -332,7 +332,7 @@
     "name": "Country Unknown"
   },
   {
-    "name": "Still on Manus or Nauru"
+    "name": "Still on PNG or Nauru"
   },
   {
     "name": "Location Unknown"

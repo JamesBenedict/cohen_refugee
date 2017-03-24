@@ -17,6 +17,14 @@ body{
 	color: #333;
 }
 
+// body section{
+// 	margin-bottom: 10em;
+// 	background-color: red;
+// }
+// body:last-child{
+// 	margin-bottom: 0em;
+// }
+
 article, aside{
 	display: inline-block;
 	vertical-align: top;
@@ -31,109 +39,86 @@ aside{
 }
 
 
-h1,h2,h3,h4{
-
-	margin-bottom: .5em;
-}
-
-h1{
-	font-family: 'Abril Fatface', cursive;
-	font-size: 5em;
-	font-weight: 900;		
-}
-
-h2{
-	font-size: 1em;
-	font-weight: 300;
-}
-
-h3{
-	font-size: 1.5em;
-	font-weight: 700;	
-}
-
-h4{
-	font-size: 2em;
-	font-weight: 700;
-}
-
-p{
-	font-size: 25px;
-	line-height: 1.5em;
-	margin-bottom: 1em;
-	font-weight: 300;
-}
-code {
-  padding: .2rem .4rem;
-  font-size: 90%;
-  color: #bd4147;
-  line-height: 2em;
-  background-color: #f9f2f4;
-  border-radius: .25rem; }
-
-ul{
-	margin-bottom: 1em;
-	li{
-		font-weight: 300;
-	}
-}
-
-img{
-	width: 100%;
-}
-a{
-	color: $Jamesblue;
-	text-decoration: none;
-}
-
 #intro, #data, #map, #info {
 	margin-bottom: 2em;
-	display: inline-block;
-	vertical-align: top;
+	// display: inline-block;
+	// vertical-align: top;
 }
 #intro{
+	// text-align: center;
 	width: 100%;
-}
-#map{
-	height: 400px;
-	width: 100%;
+	min-width: 800px;
+	margin: 0 auto;
+	margin-bottom: 10em;
 }
 
-#data{
-	width: 100%;
-	// height: 100%;
-	min-height: 400px;
-	height: 100%;
-	padding-bottom: 0%;
+#intro-text{
+	max-width: 50%;
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+	margin-right: 5%;
 }
+#map{
+	
+	height: 300px;
+	width: 40%;
+	max-width: 100%;
+	// margin: 0 auto;
+	// margin-bottom: 10em;
+	display: inline-block;
+	vertical-align: top;
+
+}
+
+// #data{
+// 	width: 100%;
+// 	// height: 100%;
+// 	min-height: 400px;
+// 	height: 100%;
+// 	padding-bottom: 0%;
+// }
 
 
 #info{
 	
 }
 
-
-
-
-
-.circles-parent { 
-	text-align:center; 
-	margin-top: -20em;
+.people, .countries{
+	display: flex;
+	justify-content: space-between;
 }
-.circle         { 
-	width: 200px; height: 200px; background:green; border-radius:50%; display:inline-block; margin:0 5%; }
+
+.person, .country{
+	// display: inline-block;
+	// margin-right: 5%;
+	width: 30%;
+	h6{
+		margin-bottom: 2em;
+	}
+	h3{
+		font-weight: 300;
+		line-height: 1.25em;
+    	// margin-bottom: .5em;
+	}
+}
+
+.country{
+	margin-bottom: 5em;
+}
 
 // small
 @media (min-width: $sm-min){
 	
 #intro{
-	width: 30%;
-	margin-right: 5%;
+	
+	
 }
 
 #map{
 	height: 500px;
-	width: 60%;
+
+	
 	// margin-bottom: 5em;
 }
 }
@@ -157,3 +142,46 @@ a{
 	font-size: 30px;
 	
 }	
+
+#refugeeMap{
+	height: 500px;
+}
+
+// Squareroots
+.iran-data{
+	width: 989.69px / 10px * 1px;
+	height: 989.69px / 10px * 1px;
+	background-color: red;
+}
+.sudan-data{
+	width: 1933.90px / 10px * 1px;
+	height: 1933.90px / 10px * 1px;
+	background-color: red;
+
+}
+.mymar-data{
+	width: 1187.43px / 10px * 1px;
+	height: 1187.43px / 10px * 1px;
+	background-color: red;
+
+}
+
+// .iran-data{
+// 	height: 979491px / 10000px * 1px;
+// 	width: 50px;
+// 	background-color: red;
+// }
+// .sudan-data{
+// 	height: 3740000px / 10000px * 1px;
+// 	width: 50px;
+// 	background-color: red;
+
+// }
+// .mymar-data{
+// 	height: 1410000px / 10000px * 1px;
+// 	width: 50px;
+// 	background-color: red;
+
+// }
+
+

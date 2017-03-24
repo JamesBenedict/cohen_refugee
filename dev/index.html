@@ -17,27 +17,151 @@
 
 </head>
 <body>
-<h1>Context behind Broken Men in Paradise</h1>
 
 
-	<div id="intro">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare egestas mi at elementum. Curabitur consectetur magna congue, tempus ante malesuada, laoreet libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque tristique efficitur sagittis. Nullam at mi mi. Aenean libero quam, molestie sed magna non, maximus consectetur urna. Morbi mauris ipsum, bibendum eu risus sit amet, tristique faucibus risus. Nulla bibendum, purus ut sodales pellentesque, erat justo iaculis odio, sit amet pellentesque turpis felis sed elit.</p>
-	</div>
 
-	<div id="map"> </div>
+
+	<section id="intro">
+		
+
+	
+		<div id="intro-content"></div>
+
+		<script id="intro-template" type="text/x-handlebars-template">
+			
+		  		<h1>{{headline}}</h1>
+		        <p id="intro-text">{{text}}</p>
+		        <div id="map">{{map}}</div>
+
+		       
+		</script>
+	</section>
+
+	
 	
 
+<!-- <section id="map">
+	<p>map</p>
+	 </section>
+ -->
 
 
-	<div id="data">
-		
+	<section id="donut">
+		 <div id="donut-charts"></div>
+	</section>
+
+
+	<section id="data">	
 		<div id="chart"></div>
 		<!-- <svg id="chart" width="960" height="500">
 			viewBox="0 0 960 500"
 			preserveAspectRatio = ''
 		</svg> -->
-	</div>
+
+
+	</section>
+
+
+<!-- 
+		<div id="refugeeMap">
+		</div>	
+ -->
+	<section class="countries">
+
+		
+		<div class="country">
+		<div class="iran-data"></div>
+		<h2>Iran</h2> 
+		<h2 span class="place">979,491 persons of concern</span></h2>
+
+		<p>As a Kurd, he left Iran to avoid religious persecution. Most Iranian Kurds, a minority in Iran, are Sunni Muslims and are being persecuted by the majority Shia Muslim population. Kurds have long fought for a federal state of their own, leading Ayatolla Khomeini to declare Jihad against the Kurdish people.</p>
+		</div>
+
+		<div class="country">
+		<div class="sudan-data"></div>
+		<h2>Sudan</h2>
+		<h2 span class="place">3,740,000 persons of concern</span></h2>
+		<p>The Sudanese government has been ethnically cleansing the Fur, Masalit and Zaghawa peoples
+			since 2003, when rebel groups from the marginalized minorities sought shared power with the
+			Arab government. Government forces have directly overseen and participated in massacres, summary executions and other human rights abuses of civilian men, women and children in Darfur, one of the world’s
+			poorest and most inaccessible regions.</p>
+
+			</div>
+
+
+		<div class="country">
+		<div class="mymar-data"></div>
+		<h2>Mymar</h2>
+		<h2 span class="place">1,410,000 persons of concern</span></h2>
+		<p>The Rohingya, an ethnic Muslim minority, is subject to discriminatory policies created by
+			Myanmar’s Buddhist-dominated government. The Myanmar government refuses to grant citizenship to the Rohingya, who differs ethnically, linguistically and religiously from the Buddhist majority.
+			 Without a government to fight for and protect the Rohingya’s basic human rights, the essentially
+			stateless minority has no legal or enforceable rights and is therefore freely oppressed in Myanmar.</p>
+		</div>
+	</section>
+
+	<section class="people">
+		<div class="person">
+
+
+			<img src="img/11Cohen-slide-CD4Q-articleLarge-v6.jpg">
+			<h6>Ashley Gilbertson/ for The New York Times</h6>
+
+			<h3>"After three years suffering here I know only this: Unless you see it, don’t believe it.”</h3>
+			<br>
+			<br>
+
+			<h4>Benham Satah, <span class="place">Kurd from Iran</span></h4>
+
+			<!-- <p>As a Kurd, he left Iran to avoid religious persecution. Most Iranian Kurds, a minority in Iran, are Sunni Muslims and are being persecuted by the majority Shia Muslim population. Kurds have long fought for a federal state of their own, leading Ayatolla Khomeini to declare Jihad against the Kurdish people.</p> -->
+
+
+		</div>
+
+		<div class="person">
+
+
+			<img src="img/11Cohen-slide-H1DZ-superJumbo.jpg">
+			<h6>Ashley Gilbertson/ for The New York Times</h6>
+
+			<h3>“The Australians argue about us and two elections were won fighting about our situation. ‘Don’t let in the boat people,’ they say, or ‘say yes to the boat people,’ but in the end, we’re just tools. No one really cares about us.”	</h3>
+			<br>
+			<br>
+
+			<h4>Abdul Aziz Muhamat<span class="place"> from Darfur, Sudan</span></h4>
+
+			<!-- <p>The Sudanese government has been ethnically cleansing the Fur, Masalit and Zaghawa peoples
+			since 2003, when rebel groups from the marginalized minorities sought shared power with the
+			Arab government. Government forces have directly overseen and participated in massacres, summary executions and other human rights abuses of civilian men, women and children in Darfur, one of the world’s
+			poorest and most inaccessible regions.</p>
+ -->
+
+			
+
+
+		</div>
+
+		<div class="person">
+
+
+			<img src="img/11Cohen-slide-D0AT-superJumbo.jpg">
+			<h6>Ashley Gilbertson/ for The New York Times</h6>
+
+			<h3>"I was shouting and screaming, ‘My family is gone, someone help me!’ But no-one came. That is my only regret. When I close my eyes, I can see that bus leaving.”</h3>
+			<br>
+			<br>
+
+			<h4>Nayser Ahmen <span class="place">Rohingya from Myanmar </span></h4>
+
+			
+
+		</div>
+		
+	</section>
+
 	
+
+	  
 <!-- 
 
 <div class="circles-parent">
@@ -47,14 +171,19 @@
 </div>
  -->
 <script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/handlebars.js"></script>
+<script type="text/javascript" src="js/tabletop.js"></script>
+
 <script src="http://d3js.org/d3.v3.js"></script>
 <script src="js/d3-ring-note.js"></script>
 <script src="js/sankey.js"></script>
 <script src="js/app.js"></script>
+<script src="js/circle.js"></script>
+
 <script src="js/leaflet.js"></script>
 
-<script src="js/map.js"></script>
-
+<!-- <script src="js/map.js"></script>
+ -->
 
 <script>
 	
