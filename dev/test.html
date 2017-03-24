@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="css/leaflet.css">
 	<link rel="stylesheet" href="css/sankey.css">
 
+		<link rel="stylesheet" href="css/flipbook.css">
+
 	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lato:300,400,700,900" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 
@@ -20,8 +22,9 @@
 
 
 
-
-	<section id="intro">
+<div id="book">
+	<div  class="page">
+		<section id="intro">
 		
 
 	
@@ -35,18 +38,11 @@
 
 		       
 		</script>
-	</section>
+		</section>
+	</div>
 
-	
-	
-
-<!-- <section id="map">
-	<p>map</p>
-	 </section>
- -->
-
-
-	<section id="donut">
+	<div class="page">
+		<section id="donut">
 		 <div id="donut-charts"></div>
 
 		 	
@@ -54,21 +50,64 @@
 		 		<h2>Testy McTest</h2>
 		 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare egestas mi at elementum. Curabitur consectetur magna congue, tempus ante malesuada, laoreet libero. Pellentesque habitant morbi trnistique senectus et netus et malesuada fames ac turpis egestas. Pellentesque tristique efficitur sagittis. Nullam at mi mi. Aenean libero quam, molestie sed magna non, maximus consectetur urna. Morbi mauris ipsum, bibendum eu risus sit amet, tristique faucibus risus. Nulla bibendum, purus ut sodales pellentesque, erat justo iaculis odio, sit amet pellentesque turpis felis sed elit.</p>
 		 	</div>
-		 	
+		</section>
+	</div>
 
-	</section>
+	<div class="page">
+		<section id="data">	
+			<div id="chart"></div>
+			<!-- <svg id="chart" width="960" height="500">
+				viewBox="0 0 960 500"
+				preserveAspectRatio = ''
+			</svg> -->
 
 
-	<section id="data">	
-		<div id="chart"></div>
-		<!-- <svg id="chart" width="960" height="500">
-			viewBox="0 0 960 500"
-			preserveAspectRatio = ''
-		</svg> -->
+		</section>
+
+	</div>
+
+	<div class="page">
+
+		<section id="countries"></section>
+		<script id="countries-template" type="text/x-handlebars-template">
+			<div class="country">
+				<!-- <div class="{{tag}}"></div> -->
+				<h2>{{name}}</h2>
+				<h2 span class="place">{{POC}}</h2>
+				<p>{{info}}</p>
+			</div>
+		</script>
+	</div>
 
 
-	</section>
+	<div class="page">
+	<section id="people"></section>
+		<script id="people-template" type="text/x-handlebars-template">
+			<div class="person">
+				{{{img}}}
+				<h6>{{byline}}</h6>
 
+				<h3>{{quote}}</h3>
+
+				<h4>{{name}} <span class="place">{{country}}</span></h4>
+			</div>
+
+		</script>
+
+	
+
+	
+
+	  </div>
+</div>
+	
+
+
+
+	
+
+
+	
 
 <!-- 
 		<div id="refugeeMap">
@@ -81,15 +120,7 @@
 
 	
 
-		<section id="countries"></section>
-		<script id="countries-template" type="text/x-handlebars-template">
-			<div class="country">
-				<!-- <div class="{{tag}}"></div> -->
-				<h2>{{name}}</h2>
-				<h2 span class="place">{{POC}}</h2>
-				<p>{{info}}</p>
-			</div>
-		</script>
+	
 
 		<!-- <div class="country">
 			<div class="iran-data"></div>
@@ -125,34 +156,17 @@
 
 
 
-		<section id="countries"></div>
+	<!-- 	<section id="countries"></div>
 		<script id="countries-template" type="text/x-handlebars-template">
 			<div class="country">
-				<!-- <div class="{{tag}}"></div> -->
+				<div class="{{tag}}"></div>
 				<h2>{{name}}</h2>
 				<h2 span class="place">{{POC}}</h2>
 				<p>{{info}}</p>
 			</div>
-		</script>
-
-	<section id="people"></section>
-		<script id="people-template" type="text/x-handlebars-template">
-			<div class="person">
-				{{{img}}}
-				<h6>{{byline}}</h6>
-
-				<h3>{{quote}}</h3>
-
-				<h4>{{name}} <span class="place">{{country}}</span></h4>
-			</div>
-
-		</script>
+		</script> -->
 
 	
-
-	
-
-	  
 <!-- 
 
 <div class="circles-parent">
@@ -161,15 +175,37 @@
    <div class="circle"></div>
 </div>
  -->
+
+ <div class="button_wrap">
+	<button id="exit">
+		<!-- <p>EXIT</p> -->
+		<span class="exit-icon"></span>
+	</button>
+	<button id="restart">
+		<!-- <span class="reset-icon"></span> -->
+		<div class="reset">
+			<div class="reset-icon"></div>
+		</div>
+	</button>
+
+	<button id="next">
+		<span class="arrow-down"></span>
+ 	</button>
+	<button id="prev">
+		<span class="arrow-up prev"></span>
+	</button>
+</div>
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/handlebars.js"></script>
 <script type="text/javascript" src="js/tabletop.js"></script>
 
-<script src="js/d3.min.js"></script>
+<script src="http://d3js.org/d3.v3.js"></script>
 <script src="js/d3-ring-note.js"></script>
 <script src="js/sankey.js"></script>
 <script src="js/app.js"></script>
 <script src="js/circle.js"></script>
+
+<script src="js/flipbook.js"></script>
 
 <script src="js/leaflet.js"></script>
 
