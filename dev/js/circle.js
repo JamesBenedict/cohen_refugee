@@ -1,13 +1,21 @@
- $(function() {
+var commas = d3.format(",");
+
+
+    $(function() {
 
         var donutData = [
 {
-"type": "Refugees & Asylum Seekers",
-"unit": "",
+"type": "Refugees & Asylum Seekers accepted by country since 2013",
+"unit": " people of concern",
+"unit2": " of total persons of concern",
 "data": [
   {
     "cat": "Chad",
     "val": 1010485
+  },
+  {
+    "cat": "Myanmar",
+    "val": 810000
   },
   {
     "cat": "Bangladesh",
@@ -23,7 +31,11 @@
   },
   {
     "cat": "Thailand",
-    "val": 375876
+    "val": 374827
+  },
+  {
+    "cat": "Other countries",
+    "val": 374226
   },
   {
     "cat": "Ethiopia",
@@ -48,37 +60,9 @@
   {
     "cat": "Turkey",
     "val": 49640
-  },
-  {
-    "cat": "Iraq",
-    "val": 40533
-  },
-  {
-    "cat": "United States of America",
-    "val": 31884
-  },
-  {
-    "cat": "Kenya",
-    "val": 27881
-  },
-  {
-    "cat": "Israel",
-    "val": 27709
-  },
-  {
-    "cat": "France",
-    "val": 24555
-  },
-  {
-    "cat": "Sweden",
-    "val": 21143
-  },
-  {
-    "cat": "Australia",
-    "val": 20859
   }
 ],
-"total": 3985308
+"total": 4794177
 }
 ];
 
@@ -185,13 +169,13 @@
 
         var setCenterText = function(thisDonut) {
             var sum = d3.sum(thisDonut.selectAll('.clicked').data(), function(d) {
-                return d.data.val;
+                return commas(d.data.val);
             });
 
             thisDonut.select('.value')
                 .text(function(d) {
-                    return (sum)? sum.toFixed(1) + d.unit
-                                : d.total.toFixed(1) + d.unit;
+                    return (sum)? commas(sum.toFixed()) + d.unit + "\n" + "worldwide (2013 - 2015)"
+                                : commas(d.total.toFixed()) + d.unit;
                 });
             thisDonut.select('.percentage')
                 .text(function(d) {
@@ -203,7 +187,7 @@
         var resetAllCenterText = function() {
             charts.selectAll('.value')
                 .text(function(d) {
-                    return d.total.toFixed(1) + d.unit;
+                    return commas(d.total.toFixed()) + d.unit;
                 });
             charts.selectAll('.percentage')
                 .text('');
@@ -240,10 +224,10 @@
 
                     var thisDonut = charts.select('.type' + j);
                     thisDonut.select('.value').text(function(donut_d) {
-                        return d.data.val.toFixed(1) + donut_d.unit;
+                        return d.data.cat + ": " + commas(d.data.val.toFixed());
                     });
                     thisDonut.select('.percentage').text(function(donut_d) {
-                        return (d.data.val/donut_d.total*100).toFixed(2) + '%';
+                        return (d.data.val/donut_d.total*100).toFixed(2) + '% of worldwide persons of concern';
                     });
                 },
                 
@@ -256,20 +240,6 @@
                     setCenterText(thisDonut);
                 },
 
-                'click': function(d, i, j) {
-                    var thisDonut = charts.select('.type' + j);
-
-                    if (0 === thisDonut.selectAll('.clicked')[0].length) {
-                        thisDonut.select('circle').on('click')();
-                    }
-
-                    var thisPath = d3.select(this);
-                    var clicked = thisPath.classed('clicked');
-                    pathAnim(thisPath, ~~(!clicked));
-                    thisPath.classed('clicked', !clicked);
-
-                    setCenterText(thisDonut);
-                }
             };
 
             var pie = d3.layout.pie()
@@ -325,7 +295,9 @@
                              .attr("viewBox", "0 0 1000 1000")  
                              .classed("svg-content-responsive", true)                     
                             .append('svg:g')
-                            .attr('class', 'donut type')
+                            .attr('class', function(d, i) {
+                                return 'donut type' + i;
+                            })
                             .attr('transform', 'translate(' + 500 + ',' + 500 + ')');
             createLegend(getCatNames(dataset));
             createCenter();

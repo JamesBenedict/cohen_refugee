@@ -99,7 +99,7 @@ aside {
   display: inline-block;
   vertical-align: top; }
 
-.people, .countries {
+#people, #countries {
   display: flex;
   justify-content: space-between; }
 

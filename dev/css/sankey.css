@@ -60,25 +60,25 @@ g.node rect {
 
 #donut{
 /*  background-color: red;
-*/  width: 50%;
+*/  width: 100%;
  
 
 }
 
-#donut-chart{
-/*  width: 50%;
-*/}
-/*#donut-charts{
-  background-color: blue;
-  position: relative;
-  width: 100%;
-  height: 500px;
-  margin-bottom: 5000em;
-  left: 0;
-}*/
+
+.donut-text{
+/*  float: right;
+*/  
+width: 40%;
+position: relative;
+vertical-align: center;
+  display: inline-block;
+  margin-left: 5%;
+
+}
 
 
-.svg-content {
+  .svg-content {
     display: inline-block;
     position: absolute;
     top: 0;
@@ -87,8 +87,10 @@ g.node rect {
 #donut-charts {
     display: inline-block;
     position: relative;
-    width: 100%;
+    width: 50%;
     padding-bottom: 3%; /* aspect ratio */
     vertical-align: middle;
     overflow: hidden;
-}
+/*    float: right;
+*/}
+

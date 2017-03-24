@@ -38,7 +38,6 @@ aside{
 	width: 30%;
 }
 
-
 #intro, #data, #map, #info {
 	margin-bottom: 2em;
 	// display: inline-block;
@@ -84,7 +83,7 @@ aside{
 	
 }
 
-.people, .countries{
+#people, #countries{
 	display: flex;
 	justify-content: space-between;
 }

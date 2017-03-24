@@ -155,6 +155,25 @@ function showInfo(data, tabletop) {
     $("#intro-content").append(html);
   });
 
+  var source   = $("#countries-template").html();
+  var template = Handlebars.compile(source);
+  $.each( tabletop.sheets("country").all(), function(i, work) {
+    var html = template(work);
+    $("#countries").append(html);
+  });
+
+  var source   = $("#people-template").html();
+  var template = Handlebars.compile(source);
+  $.each( tabletop.sheets("people").all(), function(i, work) {
+    var html = template(work);
+    $("#people").append(html);
+  });
+
+  
+
+
+
+
   map();
 }
 
