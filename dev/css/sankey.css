@@ -74,6 +74,7 @@ position: relative;
 vertical-align: center;
   display: inline-block;
   margin-left: 5%;
+  padding-top: 5%;
 
 }
 
@@ -89,7 +90,7 @@ vertical-align: center;
     position: relative;
     width: 50%;
     padding-bottom: 3%; /* aspect ratio */
-    vertical-align: middle;
+    vertical-align: top;
     overflow: hidden;
 /*    float: right;
 */}
