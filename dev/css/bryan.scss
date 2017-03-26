@@ -115,7 +115,7 @@ vertical-align: center;
   fill-opacity: .9;
   shape-rendering: crispEdges;
 }
- 
+
 .node text {
   pointer-events: none;
   text-shadow: 0 1px 0 #fff;
@@ -134,13 +134,11 @@ vertical-align: center;
 }
 
 g.node rect {
-
   fill: rgba(14,21,49, 1); /* or whatever color */
-
 }
 
 h1 {
-  font-family: 'Open Sans', sans-serif;
+  // font-family: 'Open Sans', sans-serif;
   font-size: 150%;
   padding-left: 10px;
 
@@ -160,6 +158,7 @@ h1 {
     vertical-align: top;
     overflow: hidden;
 }
+
 .svg-content-responsive {
     display: inline-block;
     position: absolute;
@@ -168,36 +167,19 @@ h1 {
 }
 
 
- body {
-        font-size: 100%;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
-    .svg-content {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-#donut-charts {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    padding-bottom: 3%; /* aspect ratio */
-    vertical-align: middle;
-    overflow: hidden;
+ // body {
+ //        font-size: 100%;
+ //        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+ //    }
+.svg-content {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 
- body {
-        font-size: 100%;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
-    .svg-content {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+ 
 #donut-charts {
     display: inline-block;
     position: relative;
@@ -210,7 +192,41 @@ h1 {
 
 
 #donut{
+  width: 100%;
+  height: 100vh;
+}
+
+#donut{
 width: 100%;
-height: 100vh;
+ 
+
+}
+
+
+.donut-text{
+ 
+width: 40%;
+position: relative;
+vertical-align: center;
+  display: inline-block;
+  margin-left: 5%;
+  padding-top: 5%;
+
+}
+
+
+  .svg-content {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#donut-charts {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    padding-bottom: 3%; 
+    vertical-align: top;
+    overflow: hidden;
 
 }

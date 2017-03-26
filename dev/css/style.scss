@@ -25,30 +25,15 @@ body{
 // 	margin-bottom: 0em;
 // }
 
-article, aside{
-	display: inline-block;
-	vertical-align: top;
-}
 
-article{
-	width: 55%;
-	margin-right: 5%;
-}
-aside{
-	width: 30%;
-}
 
 #intro, #data, #map, #info {
-	margin-bottom: 2em;
-	// display: inline-block;
+	// margin-bottom: 2em;
+	display: inline-block;
 	// vertical-align: top;
 }
 #intro{
-	// text-align: center;
-	width: 100%;
-	min-width: 800px;
-	margin: 0 auto;
-	margin-bottom: 10em;
+	
 }
 
 #intro-text{
@@ -182,5 +167,15 @@ aside{
 // 	background-color: red;
 
 // }
+.annotation > path{
+	stroke: #2a2a2a;
+	stroke-width: 2px;
+	stroke-dasharray: 5;
+	fill: none;
+} 
 
+.annotation >text{
+	text-align: left;
+	text-anchor: start;
+}
 

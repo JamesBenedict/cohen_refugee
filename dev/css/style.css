@@ -65,25 +65,8 @@ body {
   border-radius: 4px;
   color: #333; }
 
-article, aside {
-  display: inline-block;
-  vertical-align: top; }
-
-article {
-  width: 55%;
-  margin-right: 5%; }
-
-aside {
-  width: 30%; }
-
 #intro, #data, #map, #info {
-  margin-bottom: 2em; }
-
-#intro {
-  width: 100%;
-  min-width: 800px;
-  margin: 0 auto;
-  margin-bottom: 10em; }
+  display: inline-block; }
 
 #intro-text {
   max-width: 50%;
@@ -141,3 +124,13 @@ aside {
   width: 118.743px;
   height: 118.743px;
   background-color: red; }
+
+.annotation > path {
+  stroke: #2a2a2a;
+  stroke-width: 2px;
+  stroke-dasharray: 5;
+  fill: none; }
+
+.annotation > text {
+  text-align: left;
+  text-anchor: start; }

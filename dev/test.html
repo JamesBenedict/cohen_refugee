@@ -1,222 +1,379 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
-	<meta charset="UTF-8">
-	<!-- <meta charset="UTF-8">
+<meta charset="utf-8">
+<style type="text/css">
+    body {
+        font-size: 100%;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    .svg-content {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#donut-charts {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 3%; /* aspect ratio */
+    vertical-align: middle;
+    overflow: hidden;
+}
 
-	<meta name="viewport" content="width=device-width"> -->
-
-	<title>Cohen refugees</title>
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/leaflet.css">
-	<link rel="stylesheet" href="css/sankey.css">
-
-		<link rel="stylesheet" href="css/flipbook.css">
-
-	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lato:300,400,700,900" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css">
-
-</head>
+</style>
 <body>
+    <div id="donut-charts"></div>
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script>
+
+var commas = d3.format(",");
 
 
 
-<div id="book">
-	<div  class="page">
-		<section id="intro">
-		
+    $(function() {
 
-	
-		<div id="intro-content"></div>
-
-		<script id="intro-template" type="text/x-handlebars-template">
-			
-		  		<h1>{{headline}}</h1>
-		        <p id="intro-text">{{text}}</p>
-		        <div id="map">{{map}}</div>
-
-		       
-		</script>
-		</section>
-	</div>
-
-	<div class="page">
-		<section id="donut">
-		 <div id="donut-charts"></div>
-
-		 	
-		 	<div class="donut-text"> 
-		 		<h2>Testy McTest</h2>
-		 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare egestas mi at elementum. Curabitur consectetur magna congue, tempus ante malesuada, laoreet libero. Pellentesque habitant morbi trnistique senectus et netus et malesuada fames ac turpis egestas. Pellentesque tristique efficitur sagittis. Nullam at mi mi. Aenean libero quam, molestie sed magna non, maximus consectetur urna. Morbi mauris ipsum, bibendum eu risus sit amet, tristique faucibus risus. Nulla bibendum, purus ut sodales pellentesque, erat justo iaculis odio, sit amet pellentesque turpis felis sed elit.</p>
-		 	</div>
-		</section>
-	</div>
-
-	<div class="page">
-		<section id="data">	
-			<div id="chart"></div>
-			<!-- <svg id="chart" width="960" height="500">
-				viewBox="0 0 960 500"
-				preserveAspectRatio = ''
-			</svg> -->
-
-
-		</section>
-
-	</div>
-
-	<div class="page">
-
-		<section id="countries"></section>
-		<script id="countries-template" type="text/x-handlebars-template">
-			<div class="country">
-				<!-- <div class="{{tag}}"></div> -->
-				<h2>{{name}}</h2>
-				<h2 span class="place">{{POC}}</h2>
-				<p>{{info}}</p>
-			</div>
-		</script>
-	</div>
-
-
-	<div class="page">
-	<section id="people"></section>
-		<script id="people-template" type="text/x-handlebars-template">
-			<div class="person">
-				{{{img}}}
-				<h6>{{byline}}</h6>
-
-				<h3>{{quote}}</h3>
-
-				<h4>{{name}} <span class="place">{{country}}</span></h4>
-			</div>
-
-		</script>
-
-	
-
-	
-
-	  </div>
-</div>
-	
+        var donutData = [
+{
+"type": "Asylum Countries for Iran, Myanmar and Sudan",
+"unit": " persons of concern (2013 - 2015)",
+"data": [
+  {
+    "cat": "Chad", 
+    "val": 1010485
+  },
+  {
+    "cat": "Myanmar",
+    "val": 810000
+  },
+  {
+    "cat": "Bangladesh",
+    "val": 695553
+  },
+  {
+    "cat": "South Sudan",
+    "val": 674887
+  },
+  {
+    "cat": "Malaysia",
+    "val": 414407
+  },
+  {
+    "cat": "Thailand",
+    "val": 374827
+  },
+  {
+    "cat": "Other countries",
+    "val": 374226
+  },
+  {
+    "cat": "Ethiopia",
+    "val": 107787
+  },
+  {
+    "cat": "Germany",
+    "val": 87518
+  },
+  {
+    "cat": "Egypt",
+    "val": 81777
+  },
+  {
+    "cat": "United Kingdom",
+    "val": 63038
+  },
+  {
+    "cat": "India",
+    "val": 50032
+  },
+  {
+    "cat": "Turkey",
+    "val": 49640
+  },
+  {
+    "cat": "Australia",
+    "val": 20859
+  }
+],
+"total": 4773318
+}
+];
 
 
-
-	
-
-
-	
-
-<!-- 
-		<div id="refugeeMap">
-		</div>	
- -->
+        var donuts = new DonutCharts();
+        donuts.create(donutData);
 
 
+    });
+    
 
-		
+    function DonutCharts() {
 
-	
+        var charts = d3.select('#donut-charts');
 
-	
-
-		<!-- <div class="country">
-			<div class="iran-data"></div>
-			<h2>Iran</h2> 
-			<h2 span class="place">979,491 persons of concern</span></h2>
-
-			<p>As a Kurd, he left Iran to avoid religious persecution. Most Iranian Kurds, a minority in Iran, are Sunni Muslims and are being persecuted by the majority Shia Muslim population. Kurds have long fought for a federal state of their own, leading Ayatolla Khomeini to declare Jihad against the Kurdish people.</p>
-		</div> -->
-
-		<!-- <div class="country">
-		<div class="sudan-data"></div>
-		<h2>Sudan</h2>
-		<h2 span class="place">3,740,000 persons of concern</span></h2>
-		<p>The Sudanese government has been ethnically cleansing the Fur, Masalit and Zaghawa peoples
-			since 2003, when rebel groups from the marginalized minorities sought shared power with the
-			Arab government. Government forces have directly overseen and participated in massacres, summary executions and other human rights abuses of civilian men, women and children in Darfur, one of the world’s
-			poorest and most inaccessible regions.</p>
-
-			</div>
+        var chart_m,
+            chart_r,
+            color = d3.scale.category20();
 
 
-		<div class="country">
-		<div class="mymar-data"></div>
-		<h2>Mymar</h2>
-		<h2 span class="place">1,410,000 persons of concern</span></h2>
-		<p>The Rohingya, an ethnic Muslim minority, is subject to discriminatory policies created by
-			Myanmar’s Buddhist-dominated government. The Myanmar government refuses to grant citizenship to the Rohingya, who differs ethnically, linguistically and religiously from the Buddhist majority.
-			 Without a government to fight for and protect the Rohingya’s basic human rights, the essentially
-			stateless minority has no legal or enforceable rights and is therefore freely oppressed in Myanmar.</p>
-		</div> -->
-<!-- 	</section>
- -->
+        var getCatNames = function(dataset) {
+            var catNames = new Array();
+
+            for (var i = 0; i < dataset[0].data.length; i++) {
+                catNames.push(dataset[0].data[i].cat);
+            }
+
+            return catNames;
+        }
+
+        var createLegend = function(catNames) {
+            var legends = charts.select('.legend')
+                            .selectAll('g')
+                                .data(catNames)
+                            .enter().append('g')
+                                .attr('transform', function(d, i) {
+                                    return 'translate(' + (i * 150 + 50) + ', 10)';
+                                });
+    
+            legends.append('circle')
+                .attr('class', 'legend-icon')
+                .attr('r', 6)
+                .style('fill', function(d) {
+                    return 'rgba(31, 119, 180,' + d.data.val/donut_d.total*100 + ' )'});
+    
+            legends.append('text')
+                .attr('dx', '1em')
+                .attr('dy', '.3em')
+                .text(function(d) {
+                    return d;
+                });
+        }
+
+        var createCenter = function(pie) {
+
+            var eventObj = {
+                'mouseover': function(d, i) {
+                    d3.select(this)
+                        .transition()
+                        .attr("r", chart_r * 0.65);
+                },
+
+                'mouseout': function(d, i) {
+                    d3.select(this)
+                        .transition()
+                        .duration(500)
+                        .ease('bounce')
+                        .attr("r", chart_r * 0.6);
+                },
+
+                'click': function(d, i) {
+                    var paths = charts.selectAll('.clicked');
+                    pathAnim(paths, 0);
+                    paths.classed('clicked', false);
+                    resetAllCenterText();
+                }
+            }
+
+            var donuts = d3.selectAll('.donut');
+
+            // The circle displaying total data.
+            donuts.append("svg:circle")
+                .attr("r", chart_r * 0.6)
+                .style("fill", "#E7E7E7")
+                .on(eventObj);
+    
+            donuts.append('text')
+                    .attr('class', 'center-txt type')
+                    .attr('y', chart_r * -0.16)
+                    .attr('text-anchor', 'middle')
+                    .style('font-weight', 'bold')
+                    .text(function(d, i) {
+                        return d.type;
+                    });
+            donuts.append('text')
+                    .attr('class', 'center-txt value')
+                    .attr('text-anchor', 'middle');
+            donuts.append('text')
+                    .attr('class', 'center-txt percentage')
+                    .attr('y', chart_r * 0.16)
+                    .attr('text-anchor', 'middle')
+                    .style('fill', '#A2A2A2');
+        }
+
+        var setCenterText = function(thisDonut) {
+            var sum = d3.sum(thisDonut.selectAll('.clicked').data(), function(d) {
+                return commas(d.data.val);
+            });
+
+            thisDonut.select('.value')
+                .text(function(d) {
+                    return (sum)? commas(sum.toFixed()) + d.unit + "\n" + "worldwide (2013 - 2015)"
+                                : commas(d.total.toFixed()) + d.unit;
+                });
+            thisDonut.select('.percentage')
+                .text(function(d) {
+                    return (sum)? (sum/d.total*100).toFixed(2) + '%'
+                                : '';
+                });
+        }
+
+        var resetAllCenterText = function() {
+            charts.selectAll('.value')
+                .text(function(d) {
+                    return commas(d.total.toFixed()) + d.unit;
+                });
+            charts.selectAll('.percentage')
+                .text('');
+        }
+
+        var pathAnim = function(path, dir) {
+            switch(dir) {
+                case 0:
+                    path.transition()
+                        .duration(500)
+                        .ease('bounce')
+                        .attr('d', d3.svg.arc()
+                            .innerRadius(chart_r * 0.7)
+                            .outerRadius(chart_r)
+                        );
+                    break;
+
+                case 1:
+                    path.transition()
+                        .attr('d', d3.svg.arc()
+                            .innerRadius(chart_r * 0.7)
+                            .outerRadius(chart_r * 1.08)
+                        );
+                    break;
+            }
+        }
+
+        var updateDonut = function() {
+
+            var eventObj = {
+
+                'mouseover': function(d, i, j) {
+                    pathAnim(d3.select(this), 1);
+
+                    var thisDonut = charts.select('.type' + j);
+                    thisDonut.select('.value').text(function(donut_d) {
+                        return commas(d.data.val.toFixed()) + " persons of concern recieved by " + d.data.cat;
+                    });
+                    thisDonut.select('.percentage').text(function(donut_d) {
+                        return (d.data.val/donut_d.total*100).toFixed(2) + '%';
+                    });
+                },
+                
+                'mouseout': function(d, i, j) {
+                    var thisPath = d3.select(this);
+                    if (!thisPath.classed('clicked')) {
+                        pathAnim(thisPath, 0);
+                    }
+                    var thisDonut = charts.select('.type' + j);
+                    setCenterText(thisDonut);
+                },
+
+            };
+
+            var pie = d3.layout.pie()
+                            .sort(null)
+                            .value(function(d) {
+                                return d.val;
+                            });
+
+            var arc = d3.svg.arc()
+                            .innerRadius(chart_r * 0.7)
+                            .outerRadius(function() {
+                                return (d3.select(this).classed('clicked'))? chart_r * 1.08
+                                                                           : chart_r;
+                            });
+
+            // Start joining data with paths
+            var paths = charts.selectAll('.donut')
+                            .selectAll('path')
+                            .data(function(d, i) {
+                                return pie(d.data);
+                            });
+
+            paths
+                .transition()
+                .duration(1000)
+                .attr('d', arc);
+
+// var o = d3.scale.ordinal()
+//     .domain(d.val)
+//     .rangePoints([0, 1]);
+
+            paths.enter()
+                .append('svg:path')
+                    .attr('d', arc)
+                    .style('fill', function(d, i) {
+var percents = [0.84677786,
+0.67877313,
+0.582867515,
+0.565549582,
+0.347269551,
+0.3149809,
+0.313598214,
+0.090324592,
+0.073339342,
+0.068528432,
+0.052825309,
+0.041926392,
+0.041597899,
+0.017479665]
+                    return 'rgba(14, 21, 49,' + (percents[i]+.15) + ')' ;}) 
+                        // return color(i);})                    
+                    .style('stroke', '#FFFFFF')
+                    .on(eventObj)
+
+            paths.exit().remove();
+
+            resetAllCenterText();
+        }
+
+        this.create = function(dataset) {
+            var $charts = $('#donut-charts');
+            chart_m = 500 * 0.14;
+            chart_r = 500 * 0.85;
+
+
+            var donut = charts.selectAll('#donut-charts')
+                            .classed("svg-container", true)
+                            .data(dataset)
+                        .enter().append('svg:svg')
+                           .attr("preserveAspectRatio", "xMinYMin meet")
+                             .attr("viewBox", "0 0 1000 1000")  
+                             .classed("svg-content-responsive", true)                     
+                            .append('svg:g')
+                            .attr('class', function(d, i) {
+                                return 'donut type' + i;
+                            })
+                            .attr('transform', 'translate(' + 500 + ',' + 500 + ')');
 
 
 
-	<!-- 	<section id="countries"></div>
-		<script id="countries-template" type="text/x-handlebars-template">
-			<div class="country">
-				<div class="{{tag}}"></div>
-				<h2>{{name}}</h2>
-				<h2 span class="place">{{POC}}</h2>
-				<p>{{info}}</p>
-			</div>
-		</script> -->
 
-	
-<!-- 
 
-<div class="circles-parent">
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-</div>
- -->
 
- <div class="button_wrap">
-	<button id="exit">
-		<!-- <p>EXIT</p> -->
-		<span class="exit-icon"></span>
-	</button>
-	<button id="restart">
-		<!-- <span class="reset-icon"></span> -->
-		<div class="reset">
-			<div class="reset-icon"></div>
-		</div>
-	</button>
+            createCenter();
 
-	<button id="next">
-		<span class="arrow-down"></span>
- 	</button>
-	<button id="prev">
-		<span class="arrow-up prev"></span>
-	</button>
-</div>
-<script src="js/jquery-3.1.1.min.js"></script>
-<script src="js/handlebars.js"></script>
-<script type="text/javascript" src="js/tabletop.js"></script>
+            updateDonut();
+        }
+    
+        this.update = function(dataset) {
+            // Assume no new categ of data enter
+            var donut = charts.selectAll(".donut")
+                        .data(dataset);
 
-<script src="http://d3js.org/d3.v3.js"></script>
-<script src="js/d3-ring-note.js"></script>
-<script src="js/sankey.js"></script>
-<script src="js/app.js"></script>
-<script src="js/circle.js"></script>
+            updateDonut();
+        }
+    }
 
-<script src="js/flipbook.js"></script>
 
-<script src="js/leaflet.js"></script>
 
-<!-- <script src="js/map.js"></script>
- -->
-
-<script>
-	
-</script>
-
+    </script>
 
 
 </body>
-</html>
