@@ -56,7 +56,7 @@ var sankey = d3.sankey().nodeWidth( 36 ).nodePadding( 10 ).size( [ width,
 ] ).nodePadding( 12 );
 var path = sankey.link();
 // load the data
-d3.json( "../js/data.json", function( error, graph ) {
+d3.json( "js/data.json", function( error, graph ) {
   var nodeMap = {};
   graph.nodes.forEach( function( x ) {
     nodeMap[ x.name ] = x;
