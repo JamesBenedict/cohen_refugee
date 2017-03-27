@@ -36,7 +36,8 @@ var margin = {
     left: 50
   },
   width = 1200 - margin.left - margin.right,
-  height = 740 - margin.top - margin.bottom;
+  h = $(window).height();
+  height = h *.95 - margin.top - margin.bottom;
 var formatNumber = d3.format( ",.0f" ), // zero decimal places
   format = function( d ) {
     return formatNumber( d ) + " " + units;
@@ -103,6 +104,7 @@ d3.json( "data.json", function( error, graph ) {
     } ).append( "title" ).text( function( d ) {
       return d.name + "\n" + format( d.value );
     } );
+
   // add in the title for the nodes
   node.append( "text" ).attr( "x", -6 ).attr( "y", function( d ) {
     return d.dy / 2;
@@ -120,6 +122,7 @@ d3.json( "data.json", function( error, graph ) {
     return d.hideCircle;
   } );
 } );
+
 }
 
 function circle(){
@@ -368,30 +371,33 @@ function showInfo(data, tabletop) {
   });
 
 
-  // var source   = $("#countries-template").html();
-  // var template = Handlebars.compile(source);
-  // $.each( tabletop.sheets("country").all(), function(i, work) {
-  //   var html = template(work);
-  //   $("#countries").append(html);
-  // });
+  var source   = $("#countries-template").html();
+  var template = Handlebars.compile(source);
+  $.each( tabletop.sheets("country").all(), function(i, work) {
+    var html = template(work);
+    $("#countries").append(html);
+  });
 
-  // var source   = $("#people-template").html();
-  // var template = Handlebars.compile(source);
-  // $.each( tabletop.sheets("people").all(), function(i, work) {
-  //   var html = template(work);
-  //   $("#people").append(html);
-  // });
+  var source   = $("#people-template").html();
+  var template = Handlebars.compile(source);
+  $.each( tabletop.sheets("people").all(), function(i, work) {
+    var html = template(work);
+    $("#people").append(html);
+  });
 
   
   loadData();
 }
 
-
+function footer(){
+  h = $(window).width();
+  $('.footer').css('width', h).css('height', 'auto').css('position', 'absolute').css('left', '0').css('margin-top', '10em');
+}
 
     // http://leaflet-extras.github.io/leaflet-providers/preview/index.html
 function map(){
-  var map = L.map('map', {zoomControl:false, minZoom: 3}).setView([-5.033631, 120.279410], 3);
-  new L.TileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}').addTo(map);
+  var map = L.map('map', {zoomControl:false, minZoom: 0}).setView([-5.033631, 120.279410], 3);
+  new L.TileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}').addTo(map);
   var createLabelIcon = function(labelClass,labelText){
     return L.divIcon({ 
       className: labelClass,
@@ -422,24 +428,26 @@ function map(){
 
 }
   
-// function refugeeMap(){
-//   var map2 = L.map('refugeeMap', {scrollWheelZoom:false}).setView([16.381008, 67.080770], 4);
-//   new L.TileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}').addTo(map2);
-//   var createLabelIcon = function(labelClass,labelText){
-//     return L.divIcon({ 
-//       className: labelClass,
-//       html: labelText
-//     })
-//   }
+function refugeeMap(){
+  var map2 = L.map('refugeeMap', {scrollWheelZoom:false}).setView([16.381008, 67.080770], 4);
+  new L.TileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}').addTo(map2);
+  var createLabelIcon = function(labelClass,labelText){
+    return L.divIcon({ 
+      className: labelClass,
+      html: labelText
+    })
+  }
 
-//   L.marker(new L.LatLng(-1.833631, 146.9), {icon:createLabelIcon("textLabelclass","Manus")}).addTo(map2);
-//   L.marker(new L.LatLng(-0.421969, 166.8930322), {icon:createLabelIcon("textLabelclass","Nauru")}).addTo(map2);    
-// }
+  L.marker(new L.LatLng(-1.833631, 146.9), {icon:createLabelIcon("textLabelclass","Manus")}).addTo(map2);
+  L.marker(new L.LatLng(-0.421969, 166.8930322), {icon:createLabelIcon("textLabelclass","Nauru")}).addTo(map2);    
+}
 
 
 function loadData(){
   map();
   circle();
+  sankey();
+  footer();
 }
 
 $(document).ready( function() {

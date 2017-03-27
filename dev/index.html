@@ -21,10 +21,9 @@
 <body>
 	<section id="intro"></section>
 		<script id="intro-template" type="text/x-handlebars-template">
-			<h1>{{headline}}</h1>
+			<h1 id="reset_zoom">{{headline}}</h1>
 			<p id="intro-text">{{text}}</p>
 			<div id="map">{{map}}</div>
-			<p id="reset_zoom">reset</p>	       
 		</script>
 
 	<section id="donut"></section>
@@ -34,51 +33,43 @@
 	  		<div id="donut-text">
 	  			<h2>{{subhead}}</h2>
 	  			<p>{{copy}}</p>
+	  			<h6>Data from the UNHCR Population Statistics database.</h6>
 	  		</div>
 		</script>
-
-<!-- 	<section id="data">	
-		<div id="chart"></div>
-	</section>
- -->
-
-<!-- 
-	<section id="donut"></section>
-
-		<script id="donut-template" type="text/x-handlebars-template">
-			<div id="donut-charts"></div>
-
-	  		<div id="donut-text">
-	  			<h2>{{subhead}}</h2>
-	  			<p>{{copy}}</p>
-	  		</div>
-		</script>
-		 	
 
 	<section id="data">	
 		<div id="chart"></div>
-		
-
-
+		<h6>Statistics provided by the DIBP to the Senate inquiry into the Incident at the Manus Island Detention Centre, the Senate Inquiry into the recent allegations relating to conditions and circumstances at the Regional Processing Centre in Nauru and DIBP Monthly Operation Sovereign Borders updates.</h6>
 	</section>
 
+	<section id="case">
+		<div id="case-text">
+			<h1>A closer look</h1>
+			<p>Three countires whose citzen's fled to Australia but are now confined to Manus.</p>
+		</div>
+		<!-- <div id="POC">
+			
+			<div id="sudan-data"></div>	<p>Sudan 3,740,000 persons of concern</p>
+			<div id="mymar-data"></div>
+			<div id="iran-data"></div>	
+	
+		</div> -->
+	</section>
+	
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 
-		<section id="countries"></section>
+ 	<section id="countries"></section>
 		<script id="countries-template" type="text/x-handlebars-template">
 			<div class="country">
 				<h2>{{name}}</h2>
-				<h2 span class="place">{{POC}}</h2>
-				<p>{{info}}</p>
-			</div>
-		</script>
-
-
-		<section id="countries"></div>
-		<script id="countries-template" type="text/x-handlebars-template">
-			<div class="country">
-				<h2>{{name}}</h2>
-				<h2 span class="place">{{POC}}</h2>
-				<p>{{info}}</p>
+				<h2 span class="place">{{{POC}}}</h2>
+				<p>{{{info}}}</p>
 			</div>
 		</script>
 
@@ -95,8 +86,10 @@
 
 		</script>
 
+	<a href="https://www.nytimes.com/2016/12/09/opinion/sunday/australia-refugee-prisons-manus-island.html"><img src="img/Broken_Men_in_Paradise_-_The_New_York_Times_and_app_js_—_dev.jpg" class="footer"></a>
+
 	
- -->
+
 
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/handlebars.js"></script>

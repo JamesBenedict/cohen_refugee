@@ -3,6 +3,9 @@
 @-ms-viewport {
   width: device-width; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', sans-serif; }
+
 h1 {
   font-family: 'Abril Fatface', cursive;
   font-size: 5em;
@@ -21,6 +24,9 @@ h4 {
   font-size: 1.5em;
   font-weight: 100;
   font-weight: 500; }
+
+h6 {
+  font-size: 1.2em; }
 
 p {
   font-size: 25px;

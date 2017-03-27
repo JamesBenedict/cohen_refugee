@@ -3,6 +3,9 @@
 @-ms-viewport {
   width: device-width; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', sans-serif; }
+
 h1 {
   font-family: 'Abril Fatface', cursive;
   font-size: 5em;
@@ -21,6 +24,9 @@ h4 {
   font-size: 1.5em;
   font-weight: 100;
   font-weight: 500; }
+
+h6 {
+  font-size: 1.2em; }
 
 p {
   font-size: 25px;
@@ -65,42 +71,37 @@ body {
   border-radius: 4px;
   color: #333; }
 
-#intro, #data, #map, #info {
-  display: inline-block;
-  height: 100vh; }
-
-#intro h1 {
-  margin-bottom: 1em; }
-
-#intro-text {
-  display: inline-block;
-  text-align: left;
-  width: 50%;
-  vertical-align: center;
-  margin-right: 5%; }
+#intro {
+  margin-bottom: 10em; }
+  #intro h1 {
+    margin-bottom: 1em; }
+  #intro #intro-text {
+    display: inline-block;
+    text-align: left;
+    width: 40%;
+    vertical-align: top;
+    margin-right: 5%; }
 
 #map {
   display: inline-block;
-  width: 40%;
+  width: 50%;
   height: 60vh;
-  vertical-align: center;
+  vertical-align: top;
   border-radius: 50%;
   z-index: 500; }
-
-#reset_zoom {
-  color: white; }
 
 #donut {
   width: 100%;
   height: auto;
   display: inline-block;
-  vertical-align: top; }
+  vertical-align: top;
+  margin-bottom: 10em; }
   #donut #donut-charts {
     display: inline-block;
     position: relative;
     width: 50%;
     height: 800px;
-    padding-bottom: 3%;
+    padding-bottom: 0%;
     /* aspect ratio */
     vertical-align: middle;
     overflow: hidden;
@@ -111,13 +112,72 @@ body {
     position: relative;
     vertical-align: middle; }
 
+.people {
+  margin-bottom: 100em; }
+
 .svg-content {
   display: inline-block;
   position: absolute;
   top: 0;
   left: 0; }
 
+#data {
+  height: 100%;
+  margin-bottom: 10em; }
+  #data h6 {
+    width: 50%;
+    padding-left: 4%;
+    margin: 0 auto;
+    margin-top: -13%; }
+
+#case #case-text {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  margin-right: 5%; }
+
+#refugeeMap {
+  display: inline-block;
+  width: 45%;
+  height: 40%;
+  vertical-align: top;
+  border-radius: 50%;
+  z-index: 500; }
+
+#POC {
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  height: 200px;
+  background-color: blue; }
+  #POC * {
+    margin-bottom: 2em;
+    border-radius: 5px; }
+  #POC p {
+    margin-bottom: 0em;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: .4em; }
+
+#iran-data {
+  width: 97.9491px;
+  height: 50px;
+  background-color: red; }
+
+#sudan-data {
+  width: 374px;
+  height: 50px;
+  background-color: red;
+  display: inline-block;
+  vertical-align: top; }
+
+#mymar-data {
+  width: 141px;
+  height: 50px;
+  background-color: red; }
+
 #people, #countries {
+  width: 100%;
   display: flex;
   justify-content: space-between; }
 
@@ -140,21 +200,6 @@ body {
 
 #refugeeMap {
   height: 500px; }
-
-.iran-data {
-  width: 98.969px;
-  height: 98.969px;
-  background-color: red; }
-
-.sudan-data {
-  width: 193.39px;
-  height: 193.39px;
-  background-color: red; }
-
-.mymar-data {
-  width: 118.743px;
-  height: 118.743px;
-  background-color: red; }
 
 .annotation > path {
   stroke: #2a2a2a;
