@@ -78,14 +78,14 @@ body {
   #intro #intro-text {
     display: inline-block;
     text-align: left;
-    width: 40%;
+    width: 35%;
     vertical-align: top;
-    margin-right: 5%; }
+    margin-right: 2%; }
 
 #map {
   display: inline-block;
-  width: 50%;
-  height: 60vh;
+  width: 60%;
+  height: 600px;
   vertical-align: top;
   border-radius: 50%;
   z-index: 500; }

@@ -3,30 +3,30 @@ function sankey(){
   "cx": 17.40363484621048,
   "cy": 50,
   "r": 0,
-  "text": "Refugees/asylum seekers by country. Statistics provided by DIBP Senate inquiries and monthly reports.",
+  "text": "Refugees/asylum seekers by country.",
   "textWidth": 200,
-  "textOffset": [ 103.03830909729004, -85.63334274291992 ]
+  "textOffset": [90.03830909729004, -75.63334274291992 ]
 }, {
   "cx": 374.68655440211296,
   "cy": 137.34067665738985,
   "r": 0,
   "text": "Two main offshore processing centres: Nauru, and Manus, located in Papua New Guinea.",
   "textWidth": 200,
-  "textOffset": [ 121.07658672332764, -154.24468231201172 ]
+  "textOffset": [ 100.07658672332764, -124.24468231201172 ]
 }, {
   "cx": 1084.6315537379123,
   "cy": 70.2822499871254,
   "r": 0,
   "text": "Desintation",
   "textWidth": 200,
-  "textOffset": [ -84.16810643672943, -120.39649963378906 ]
+  "textOffset": [ 0.16810643672943, -110.39649963378906 ]
 }, {
   "cx": 728.0258964002132,
   "cy": 92.05903187394142,
   "r": 0,
   "text": "Approx. 1825 people in offshore proeccessing centres in Jan. 2015.",
   "textWidth": 200,
-  "textOffset": [ 61.26544368267059, -108.67424702644348 ]
+  "textOffset": [ 61.26544368267059, -90.67424702644348 ]
 } ];
 var units = "People";
 var margin = {
@@ -396,8 +396,11 @@ function footer(){
 
     // http://leaflet-extras.github.io/leaflet-providers/preview/index.html
 function map(){
-  var map = L.map('map', {zoomControl:false, minZoom: 0}).setView([-5.033631, 120.279410], 3);
-  new L.TileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}').addTo(map);
+  var Lat = -5.033631,
+  Long = 120.279410,
+  zoom= 3
+  map = L.map('map', {zoomControl:false, minZoom: 0}).setView([Lat , Long], zoom);
+  new L.TileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}').addTo(map);
   var createLabelIcon = function(labelClass,labelText){
     return L.divIcon({ 
       className: labelClass,
@@ -405,28 +408,36 @@ function map(){
     })
   }
 
-// 
 // var myIcon = L.icon({
-//     iconUrl: 'my-icon.png',
-//     iconSize: [38, 95],
-//     iconAnchor: [22, 94],
-//     popupAnchor: [-3, -76],
-//     shadowUrl: 'my-icon-shadow.png',
-//     shadowSize: [68, 95],
-//     shadowAnchor: [22, 94]
+//   iconUrl: 'images/marker-icon.png',
+//   iconSize: [20, 20],
+//   iconAnchor: [10, 10],
+//   labelAnchor: [6, 0] // as I want the label to appear 2px past the icon (10 + 2 - 6)
 // });
-// L.marker([50.505, 30.57], {icon: myIcon}).addTo(map);
+// L.marker([-1.833631, 146.9], {
+//   icon: myIcon
+// }).bindLabel('My label', {
+//   noHide: true,
+//   direction: 'auto'
+// });
+
+L.marker([-1.933631, 146.9]).addTo(map);
+
+L.marker([-0.421969, 166.8930322]).addTo(map);
 
 
   L.marker(new L.LatLng(-1.833631, 146.9), {icon:createLabelIcon("textLabelclass","Manus")}).addTo(map);
   L.marker(new L.LatLng(-0.421969, 166.8930322), {icon:createLabelIcon("textLabelclass","Nauru")}).addTo(map);   
 
   $('#reset_zoom').click(function(){
-    map.panTo(new L.LatLng(-5.033631, 120.279410));
+    map.setView(new L.LatLng(Lat , Long), zoom);
   })
   
+  // map.setView(new L.LatLng(40.737, -73.923), 8);
+
 
 }
+
   
 function refugeeMap(){
   var map2 = L.map('refugeeMap', {scrollWheelZoom:false}).setView([16.381008, 67.080770], 4);

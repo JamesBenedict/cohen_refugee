@@ -38,10 +38,10 @@ body{
 	#intro-text{
 		display: inline-block;
 		text-align: left;
-		width: 40%;
+		width: 35%;
 
 		vertical-align: top;
-		margin-right: 5%;
+		margin-right: 2%;
 		// float: right;
 	}
 
@@ -51,8 +51,8 @@ body{
 
 #map{
 	display: inline-block;
-	width: 50%;
-	height: 60vh;
+	width: 60%;
+	height: 600px;
 	vertical-align: top;
 	border-radius: 50%; 
   	// position: relative; 
@@ -254,7 +254,6 @@ body{
 	text-shadow: 0 0 0.1em black, 0 0 0.1em black, 0 0 0.1em black,0 0 0.1em black,0 0 0.1em;
 	color: white;
 	font-size: 30px;
-	
 }	
 
 #refugeeMap{
