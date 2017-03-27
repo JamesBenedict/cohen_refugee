@@ -195,24 +195,7 @@ function sankey(){
   },
   {
     "source": "Total Asylum Seekers",
-    "target": "Somalia",
-    "value": "1"
-  },
-  {
-    "source": "Total Asylum Seekers",
-    "target": "Sri Lanka",
-    "value": "2"
-  },
-  { "source": "Total Asylum Seekers",
-    "target": "Still on Manus or Nauru",
-    "value": "1215" 
-  },
-  {
-    "source": "Total Asylum Seekers",
-    "target": "Unknown",
-    "value": "607"
-  }
-],
+
 
 "nodes": [
   {
@@ -331,7 +314,7 @@ var sankey = d3.sankey().nodeWidth( 36 ).nodePadding( 10 ).size( [ width,
 ] ).nodePadding( 12 );
 var path = sankey.link();
 // load the data
-d3.json( data, function( error, graph ) {
+d3.json( 'js/data.json', function( error, graph ) {
   var nodeMap = {};
   graph.nodes.forEach( function( x ) {
     nodeMap[ x.name ] = x;
