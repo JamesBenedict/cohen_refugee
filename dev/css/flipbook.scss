@@ -4,7 +4,7 @@
 
 // xs 
 html{
-	background-color: $light-gray;
+	// background-color: $light-gray;
 	// background-color: red;
 	overflow: hidden;
 }
@@ -30,6 +30,8 @@ html{
 	width: 100vw;
 	height: 100vh;
 	overflow: scroll;
+		padding: 5% 2% 5% 2%;
+
 	// background-color: #00BFFF;
 	// padding-top: 100px;
 	

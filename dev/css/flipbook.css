@@ -53,7 +53,6 @@ a {
   font-weight: 100; }
 
 html {
-  background-color: #f7f7f7;
   overflow: hidden; }
 
 .test {
@@ -67,7 +66,8 @@ html {
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow: scroll; }
+  overflow: scroll;
+  padding: 5% 2% 5% 2%; }
 
 .card {
   background-color: white;

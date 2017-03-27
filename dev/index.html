@@ -11,55 +11,38 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/leaflet.css">
 	<link rel="stylesheet" href="css/bryan.css">
-
+<!-- 		<link rel="stylesheet" href="css/flipbook.css">
+ -->
 	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lato:300,400,700,900" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 
 
 </head>
 <body>
-
-
-
-
-	<section id="intro">
-		
-
-	
-		<div id="intro"></div>
-
+	<section id="intro"></section>
 		<script id="intro-template" type="text/x-handlebars-template">
-			
-		  		<h1>{{headline}}</h1>
-		        <p id="intro-text">{{text}}</p>
-		        <div id="map">{{map}}</div>
-
-		       
+			<h1>{{headline}}</h1>
+			<p id="intro-text">{{text}}</p>
+			<div id="map">{{map}}</div>
+			<p id="reset_zoom">reset</p>	       
 		</script>
+
+	<section id="donut"></section>
+		<script id="donut-template" type="text/x-handlebars-template">
+			<div id="donut-charts"></div>
+
+	  		<div id="donut-text">
+	  			<h2>{{subhead}}</h2>
+	  			<p>{{copy}}</p>
+	  		</div>
+		</script>
+
+<!-- 	<section id="data">	
+		<div id="chart"></div>
 	</section>
-
-	
-	
-
-<!-- <section id="map">
-	<p>map</p>
-	 </section>
  -->
 
-
-	<!-- <section id="donut">
-		 <div id="donut-charts"></div>
-
-		 	
-		 	<div class="donut-text"> 
-		 		<h2>Testy McTest</h2>
-		 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare egestas mi at elementum. Curabitur consectetur magna congue, tempus ante malesuada, laoreet libero. Pellentesque habitant morbi trnistique senectus et netus et malesuada fames ac turpis egestas. Pellentesque tristique efficitur sagittis. Nullam at mi mi. Aenean libero quam, molestie sed magna non, maximus consectetur urna. Morbi mauris ipsum, bibendum eu risus sit amet, tristique faucibus risus. Nulla bibendum, purus ut sodales pellentesque, erat justo iaculis odio, sit amet pellentesque turpis felis sed elit.</p>
-		 	</div>
-
- -->
-
-<!-- 			<div id="donut-charts"></div>
- -->
+<!-- 
 	<section id="donut"></section>
 
 		<script id="donut-template" type="text/x-handlebars-template">
@@ -72,79 +55,27 @@
 		</script>
 		 	
 
-	<!-- </section> -->
-
-
 	<section id="data">	
 		<div id="chart"></div>
-		<!-- <svg id="chart" width="960" height="500">
-			viewBox="0 0 960 500"
-			preserveAspectRatio = ''
-		</svg> -->
+		
 
 
 	</section>
 
 
-<!-- 
-		<div id="refugeeMap">
-		</div>	
- -->
-
-
-
-		
-
-	
-
 		<section id="countries"></section>
 		<script id="countries-template" type="text/x-handlebars-template">
 			<div class="country">
-				<!-- <div class="{{tag}}"></div> -->
 				<h2>{{name}}</h2>
 				<h2 span class="place">{{POC}}</h2>
 				<p>{{info}}</p>
 			</div>
 		</script>
 
-		<!-- <div class="country">
-			<div class="iran-data"></div>
-			<h2>Iran</h2> 
-			<h2 span class="place">979,491 persons of concern</span></h2>
-
-			<p>As a Kurd, he left Iran to avoid religious persecution. Most Iranian Kurds, a minority in Iran, are Sunni Muslims and are being persecuted by the majority Shia Muslim population. Kurds have long fought for a federal state of their own, leading Ayatolla Khomeini to declare Jihad against the Kurdish people.</p>
-		</div> -->
-
-		<!-- <div class="country">
-		<div class="sudan-data"></div>
-		<h2>Sudan</h2>
-		<h2 span class="place">3,740,000 persons of concern</span></h2>
-		<p>The Sudanese government has been ethnically cleansing the Fur, Masalit and Zaghawa peoples
-			since 2003, when rebel groups from the marginalized minorities sought shared power with the
-			Arab government. Government forces have directly overseen and participated in massacres, summary executions and other human rights abuses of civilian men, women and children in Darfur, one of the world’s
-			poorest and most inaccessible regions.</p>
-
-			</div>
-
-
-		<div class="country">
-		<div class="mymar-data"></div>
-		<h2>Mymar</h2>
-		<h2 span class="place">1,410,000 persons of concern</span></h2>
-		<p>The Rohingya, an ethnic Muslim minority, is subject to discriminatory policies created by
-			Myanmar’s Buddhist-dominated government. The Myanmar government refuses to grant citizenship to the Rohingya, who differs ethnically, linguistically and religiously from the Buddhist majority.
-			 Without a government to fight for and protect the Rohingya’s basic human rights, the essentially
-			stateless minority has no legal or enforceable rights and is therefore freely oppressed in Myanmar.</p>
-		</div> -->
-<!-- 	</section>
- -->
-
-
 
 		<section id="countries"></div>
 		<script id="countries-template" type="text/x-handlebars-template">
 			<div class="country">
-				<!-- <div class="{{tag}}"></div> -->
 				<h2>{{name}}</h2>
 				<h2 span class="place">{{POC}}</h2>
 				<p>{{info}}</p>
@@ -165,18 +96,8 @@
 		</script>
 
 	
-
-	
-
-	  
-<!-- 
-
-<div class="circles-parent">
-   <div class="circle"></div>
-   <div class="circle"></div>
-   <div class="circle"></div>
-</div>
  -->
+
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/handlebars.js"></script>
 <script type="text/javascript" src="js/tabletop.js"></script>
@@ -187,10 +108,11 @@
  <script src="js/d3.min.js"></script>
 <!-- <script src="https://d3js.org/d3.v3.js"></script>
  -->
-
-<script src="js/d3-ring-note.js"></script>
-<!-- <script src="js/sankey.js"></script>
+<!-- <script src="js/flipbook.js"></script>
  -->
+<script src="js/d3-ring-note.js"></script>
+<script src="js/sankey.js"></script>
+
 <!-- <script src="js/circle.js"></script>
  -->
 <script src="js/leaflet.js"></script>

@@ -9,12 +9,13 @@ html{
 }
 
 body{
-	padding: 5% 2% 5% 2%;
+	padding: 4% 2% 4% 2%;
 	background-color: white;
 	border: 1px solid $border-gray;
 	border-bottom: 3px solid $border-bottom;
 	border-radius: 4px;
 	color: #333;
+	// text-align: center;
 }
 
 // body section{
@@ -30,38 +31,84 @@ body{
 #intro, #data, #map, #info {
 	// margin-bottom: 2em;
 	display: inline-block;
+	height: 100vh;
 	// vertical-align: top;
 }
 #intro{
-	
+	// text-align: center;
+	h1{
+		margin-bottom: 1em;
+	}
 }
 
 #intro-text{
-	max-width: 50%;
 	display: inline-block;
 	text-align: left;
-	vertical-align: top;
+	width: 50%;
+
+	vertical-align: center;
 	margin-right: 5%;
+	// float: right;
 }
+
+
 #map{
-	
-	height: 300px;
+	display: inline-block;
 	width: 40%;
-	max-width: 100%;
-	// margin: 0 auto;
-	// margin-bottom: 10em;
+	height: 60vh;
+	vertical-align: center;
+	border-radius: 50%; 
+  	// position: relative; 
+  	z-index: 500;
+
+  	// float: left;
+	//   -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+	// -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+	// box-shadow: 0px 2px 25px rgba(0,0,0,.25);
+}
+
+#reset_zoom{
+	color: white;
+}
+
+#donut{
+	width: 100%;
+	height: auto;
 	display: inline-block;
 	vertical-align: top;
 
+  #donut-charts {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    height: 800px;  
+    padding-bottom: 3%; /* aspect ratio */
+    vertical-align: middle;
+    overflow: hidden;
+    margin-right: 5%;
+	}
+
+	#donut-text{
+		width: 40%;
+		display: inline-block;
+		position: relative;
+		vertical-align: middle;
+	}
 }
 
-// #data{
-// 	width: 100%;
-// 	// height: 100%;
-// 	min-height: 400px;
-// 	height: 100%;
-// 	padding-bottom: 0%;
-// }
+
+
+
+
+  .svg-content {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
 
 
 #info{
@@ -99,12 +146,7 @@ body{
 	
 }
 
-#map{
-	height: 500px;
 
-	
-	// margin-bottom: 5em;
-}
 }
 
 // medium
@@ -156,7 +198,7 @@ body{
 // 	background-color: red;
 // }
 // .sudan-data{
-// 	height: 3740000px / 10000px * 1px;
+// 	height: 374000{0px / 10000px * 1px;
 // 	width: 50px;
 // 	background-color: red;
 
@@ -178,4 +220,3 @@ body{
 	text-align: left;
 	text-anchor: start;
 }
-

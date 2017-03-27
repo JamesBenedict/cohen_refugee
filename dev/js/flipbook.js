@@ -263,7 +263,7 @@ function scrollWatch (){
 $(document).ready(function () {
     indexPages();
     navigation();
-    scrollWatch();
+    // scrollWatch();
 });
 
 $(window).resize(function (){
