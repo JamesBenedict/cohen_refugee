@@ -17,7 +17,7 @@ function sankey(){
   "cx": 1084.6315537379123,
   "cy": 70.2822499871254,
   "r": 0,
-  "text": "Desintation",
+  "text": "Destination",
   "textWidth": 200,
   "textOffset": [ 0.16810643672943, -110.39649963378906 ]
 }, {
@@ -397,10 +397,10 @@ function footer(){
     // http://leaflet-extras.github.io/leaflet-providers/preview/index.html
 function map(){
   var Lat = -5.033631,
-  Long = 120.279410,
+  Long = 110.279410,
   zoom= 3
   map = L.map('map', {zoomControl:false, minZoom: zoom, scrollWheelZoom:false}).setView([Lat , Long], zoom);
-  new L.TileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}').addTo(map);
+  new L.TileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}').addTo(map);
   var createLabelIcon = function(labelClass,labelText){
     return L.divIcon({ 
       className: labelClass,

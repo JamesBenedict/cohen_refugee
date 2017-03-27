@@ -128,7 +128,7 @@ article{
 #map{
 	display: inline-block;
 	width: 60%;
-	height: 600px;
+	height: 700px;
 	vertical-align: top;
 	border-radius: 50%; 
   	// position: relative; 
@@ -165,6 +165,9 @@ article{
 		display: inline-block;
 		position: relative;
 		vertical-align: middle;
+	}
+	text{
+		font-size: 130%;
 	}
 }
 
@@ -315,7 +318,7 @@ article{
 .textLabelclass{
 	white-space:nowrap;
 	text-shadow: 0 0 0.1em black, 0 0 0.1em black, 0 0 0.1em black,0 0 0.1em black,0 0 0.1em;
-	color: #b8b8b8;
+	color: white;
 	font-size: 30px;
 }	
 	
