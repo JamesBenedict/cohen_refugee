@@ -1,4 +1,7 @@
+
+
 function sankey(){
+  data = 
   var annotations = [ {
   "cx": 17.40363484621048,
   "cy": 50,
@@ -22,7 +25,279 @@ function sankey(){
   "textOffset": [ 0.16810643672943, -110.39649963378906 ]
 }, {
   "cx": 728.0258964002132,
-  "cy": 92.05903187394142,
+
+{ 
+  "links": [
+  {
+    "source": "People from Afghanistan",
+    "target": "Manus",
+    "value": "135"
+  },
+  {
+    "source": "People from Bangladesh",
+    "target": "Manus",
+    "value": "74"
+  },
+  {
+    "source": "People from India",
+    "target": "Manus",
+    "value": "13"
+  },
+  {
+    "source": "People from Iran",
+    "target": "Manus",
+    "value": "548"
+  },
+  {
+    "source": "People from Iraq",
+    "target": "Manus",
+    "value": "106"
+  },
+  {
+    "source": "People from Lebanon",
+    "target": "Manus",
+    "value": "46"
+  },
+  {
+    "source": "People from Myanmar",
+    "target": "Manus",
+    "value": "53"
+  },
+  {
+    "source": "People from Myanmar (Stateless)",
+    "target": "Manus",
+    "value": "13"
+  },
+  {
+    "source": "People from Nepal",
+    "target": "Manus",
+    "value": "19"
+  },
+  {
+    "source": "People from Pakistan",
+    "target": "Manus",
+    "value": "105"
+  },
+  {
+    "source": "People from Somalia",
+    "target": "Manus",
+    "value": "48"
+  },
+  {
+    "source": "People from Sri Lanka",
+    "target": "Manus",
+    "value": "27"
+  },
+  {
+    "source": "Stateless People",
+    "target": "Manus",
+    "value": "41"
+  },
+  {
+    "source": "Other People",
+    "target": "Manus",
+    "value": "18"
+  },
+  {
+    "source": "People from Afghanistan",
+    "target": "Nauru",
+    "value": "37"
+  },
+  {
+    "source": "People from Bangladesh",
+    "target": "Nauru",
+    "value": "42"
+  },
+  {
+    "source": "People from India",
+    "target": "Nauru",
+    "value": "14"
+  },
+  {
+    "source": "People from Iran",
+    "target": "Nauru",
+    "value": "167"
+  },
+  {
+    "source": "People from Iraq",
+    "target": "Nauru",
+    "value": "21"
+  },
+  {
+    "source": "People from Myanmar",
+    "target": "Nauru",
+    "value": "17"
+  },
+  {
+    "source": "People from Nepal",
+    "target": "Nauru",
+    "value": "12"
+  },
+  {
+    "source": "People from Pakistan",
+    "target": "Nauru",
+    "value": "74"
+  },
+  {
+    "source": "People from Somalia",
+    "target": "Nauru",
+    "value": "9"
+  },
+  {
+    "source": "People from Sri Lanka",
+    "target": "Nauru",
+    "value": "123"
+  },
+  {
+    "source": "Stateless People",
+    "target": "Nauru",
+    "value": "104"
+  },
+  {
+    "source": "Other People",
+    "target": "Nauru",
+    "value": "13"
+  },
+  {
+    "source": "Manus",
+    "target": "Total Asylum Seekers",
+    "value": "1246"
+  },
+  {
+    "source": "Nauru",
+    "target": "Total Asylum Seekers",
+    "value": "633"
+  },
+  {
+    "source": "Total Asylum Seekers",
+    "target": "Afghanistan",
+    "value": "2"
+  },
+  {
+    "source": "Total Asylum Seekers",
+    "target": "Cambodia",
+    "value": "4"
+  },
+  {
+    "source": "Total Asylum Seekers",
+    "target": "Iran",
+    "value": "34"
+  },
+  {
+    "source": "Total Asylum Seekers",
+    "target": "Iraq",
+    "value": "10"
+  },
+  {
+    "source": "Total Asylum Seekers",
+    "target": "Lebanon",
+    "value": "4"
+  },
+  {
+    "source": "Total Asylum Seekers",
+    "target": "Somalia",
+    "value": "1"
+  },
+  {
+    "source": "Total Asylum Seekers",
+    "target": "Sri Lanka",
+    "value": "2"
+  },
+  { "source": "Total Asylum Seekers",
+    "target": "Still on Manus or Nauru",
+    "value": "1215" 
+  },
+  {
+    "source": "Total Asylum Seekers",
+    "target": "Unknown",
+    "value": "607"
+  }
+],
+
+"nodes": [
+  {
+    "name": "People from Afghanistan"
+  },
+  {
+    "name": "People from Bangladesh"
+  },
+  {
+    "name": "People from India"
+  },
+  {
+    "name": "People from Iran"
+  },
+  {
+    "name": "People from Iraq"
+  },
+  {
+    "name": "People from Lebanon"
+  },
+  {
+    "name": "People from Myanmar"
+  },
+  {
+    "name": "People from Myanmar (Stateless)"
+  },
+  {
+    "name": "People from Nepal"
+  },
+  {
+    "name": "People from Pakistan"
+  },
+  {
+    "name": "People from Somalia"
+  },
+  {
+    "name": "People from Sri Lanka"
+  },
+  {
+    "name": "Stateless People"
+  },
+  {
+    "name": "Other People"
+  },
+  {
+    "name": "Manus"
+  },
+  {
+    "name": "Nauru"
+  },
+  {
+    "name": "Total Asylum Seekers"
+  },
+  {
+    "name": "Afghanistan"
+  },
+
+  {
+    "name": "Cambodia"
+  },
+  {
+    "name": "Iran"
+  },
+  {
+    "name": "Iraq"
+  },
+  {
+    "name": "Lebanon"
+  },
+
+  {
+    "name": "Somalia"
+  },
+  {
+    "name": "Sri Lanka"
+  },
+
+  {
+    "name": "Unknown"
+  },
+  {
+    "name": "Still on Manus or Nauru"
+  }
+
+] }  "cy": 92.05903187394142,
   "r": 0,
   "text": "Approx. 1825 people in offshore proeccessing centres in Jan. 2015.",
   "textWidth": 200,
@@ -56,7 +331,7 @@ var sankey = d3.sankey().nodeWidth( 36 ).nodePadding( 10 ).size( [ width,
 ] ).nodePadding( 12 );
 var path = sankey.link();
 // load the data
-d3.json( "../js/data.json", function( error, graph ) {
+d3.json( data, function( error, graph ) {
   var nodeMap = {};
   graph.nodes.forEach( function( x ) {
     nodeMap[ x.name ] = x;
