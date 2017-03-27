@@ -399,7 +399,7 @@ function map(){
   var Lat = -5.033631,
   Long = 120.279410,
   zoom= 3
-  map = L.map('map', {zoomControl:false, minZoom: 0}).setView([Lat , Long], zoom);
+  map = L.map('map', {zoomControl:false, minZoom: zoom, scrollWheelZoom:false}).setView([Lat , Long], zoom);
   new L.TileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}').addTo(map);
   var createLabelIcon = function(labelClass,labelText){
     return L.divIcon({ 
@@ -441,7 +441,7 @@ L.marker([-0.421969, 166.8930322]).addTo(map);
   
 function refugeeMap(){
   var map2 = L.map('refugeeMap', {scrollWheelZoom:false}).setView([16.381008, 67.080770], 4);
-  new L.TileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}').addTo(map2);
+  new L.TileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}').addTo(map2);
   var createLabelIcon = function(labelClass,labelText){
     return L.divIcon({ 
       className: labelClass,
@@ -459,6 +459,11 @@ function loadData(){
   circle();
   sankey();
   footer();
+  $('#data').css('visibility', 'visible');
+  $('#case').css('visibility', 'visible');
+  $('.footer').css('visibility', 'visible');
+  // $('#case').css('display', 'inline');
+
 }
 
 $(document).ready( function() {
@@ -467,7 +472,7 @@ $(document).ready( function() {
     parseNumbers: true } );
   // refugeeMap();
 
-
+  
 });
 
 
