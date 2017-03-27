@@ -195,9 +195,6 @@ body {
 
 #case, #data, .footer {
   visibility: hidden; }
-  #case h6, #data h6, .footer h6 {
-    visibility: hidden;
-    color: red; }
   #case .textLabelclass, #data .textLabelclass, .footer .textLabelclass {
     white-space: nowrap;
     text-shadow: 0 0 0.1em black, 0 0 0.1em black, 0 0 0.1em black,0 0 0.1em black,0 0 0.1em;
