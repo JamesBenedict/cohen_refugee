@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-family: 'Abril Fatface', cursive;
-  font-size: 5em;
+  font-size: 6em;
   font-weight: 900;
   margin-bottom: .5em; }
 
@@ -17,15 +17,18 @@ h2 {
   margin-bottom: .5em; }
 
 h3 {
-  font-size: 2em; }
+  font-size: 2em;
+  margin-bottom: 1em; }
 
 h4 {
   font-size: 1.5em;
   font-weight: 100;
-  font-weight: 500; }
+  font-weight: 500;
+  margin-bottom: .5em; }
 
 h6 {
-  font-size: 1.2em; }
+  font-size: 1em;
+  margin-top: .2em; }
 
 p {
   font-size: 25px;

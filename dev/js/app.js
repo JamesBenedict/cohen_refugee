@@ -37,7 +37,7 @@ var margin = {
   },
   width = 1200 - margin.left - margin.right,
   h = $(window).height();
-  height = h *.95 - margin.top - margin.bottom;
+  height = h *.9 - margin.top - margin.bottom;
 var formatNumber = d3.format( ",.0f" ), // zero decimal places
   format = function( d ) {
     return formatNumber( d ) + " " + units;
@@ -56,7 +56,7 @@ var sankey = d3.sankey().nodeWidth( 36 ).nodePadding( 10 ).size( [ width,
 ] ).nodePadding( 12 );
 var path = sankey.link();
 // load the data
-d3.json( "data.json", function( error, graph ) {
+d3.json( "../js/data.json", function( error, graph ) {
   var nodeMap = {};
   graph.nodes.forEach( function( x ) {
     nodeMap[ x.name ] = x;

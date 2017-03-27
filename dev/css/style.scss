@@ -2,13 +2,88 @@
 @import 'imports.scss';
 // @import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Lato:300,400,700,900');
+
+
+
+
+.node rect {
+  cursor: move;
+  fill-opacity: .9;
+  shape-rendering: crispEdges;
+}
+
+.node text {
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 80%;
+}
+ 
+.link {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .2;
+}
+ 
+.link:hover {
+  stroke-opacity: .5;
+}
+
+g.node rect {
+  fill: rgba(14,21,49, 1); /* or whatever color */
+}
+
+h1 {
+  // font-family: 'Open Sans', sans-serif;
+  // font-size: 150%;
+  padding-left: 10px;
+
+}
+
+.annotation circle {
+  fill: rgba(102, 255, 255, .2);
+  stroke: black;
+}
+
+
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 63%; /* aspect ratio */
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+
+.svg-content {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+
+
+
 html{
 	font-family: 'Lato', sans-serif;
 	background-color: $light-gray;
 	padding: 2%;
 }
-
 body{
+
+}
+
+article{
 	padding: 4% 2% 4% 2%;
 	background-color: white;
 	border: 1px solid $border-gray;
@@ -95,6 +170,7 @@ body{
 
 .people{
 	margin-bottom: 100em;
+	height: 100vh;
 }
 
 
@@ -280,4 +356,13 @@ body{
 }
 
 
+}
+
+#byline, #date{
+	opacity: .5;
+	display: inline-block;
+}
+
+#date{
+	float: right;
 }

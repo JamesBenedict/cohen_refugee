@@ -2,72 +2,72 @@
   "links": [
   {
     "source": "People from Afghanistan",
-    "target": "PNG",
+    "target": "Manus",
     "value": "135"
   },
   {
     "source": "People from Bangladesh",
-    "target": "PNG",
+    "target": "Manus",
     "value": "74"
   },
   {
     "source": "People from India",
-    "target": "PNG",
+    "target": "Manus",
     "value": "13"
   },
   {
     "source": "People from Iran",
-    "target": "PNG",
+    "target": "Manus",
     "value": "548"
   },
   {
     "source": "People from Iraq",
-    "target": "PNG",
+    "target": "Manus",
     "value": "106"
   },
   {
     "source": "People from Lebanon",
-    "target": "PNG",
+    "target": "Manus",
     "value": "46"
   },
   {
     "source": "People from Myanmar",
-    "target": "PNG",
+    "target": "Manus",
     "value": "53"
   },
   {
     "source": "People from Myanmar (Stateless)",
-    "target": "PNG",
+    "target": "Manus",
     "value": "13"
   },
   {
     "source": "People from Nepal",
-    "target": "PNG",
+    "target": "Manus",
     "value": "19"
   },
   {
     "source": "People from Pakistan",
-    "target": "PNG",
+    "target": "Manus",
     "value": "105"
   },
   {
     "source": "People from Somalia",
-    "target": "PNG",
+    "target": "Manus",
     "value": "48"
   },
   {
     "source": "People from Sri Lanka",
-    "target": "PNG",
+    "target": "Manus",
     "value": "27"
   },
   {
     "source": "Stateless People",
-    "target": "PNG",
+    "target": "Manus",
     "value": "41"
   },
   {
     "source": "Other People",
-    "target": "PNG",
+    "target": "Manus",
     "value": "18"
   },
   {
@@ -131,7 +131,7 @@
     "value": "13"
   },
   {
-    "source": "PNG",
+    "source": "Manus",
     "target": "Total Asylum Seekers",
     "value": "1246"
   },
@@ -143,17 +143,7 @@
   {
     "source": "Total Asylum Seekers",
     "target": "Afghanistan",
-    "value": "3"
-  },
-  {
-    "source": "Total Asylum Seekers",
-    "target": "Albania",
-    "value": "1"
-  },
-  {
-    "source": "Total Asylum Seekers",
-    "target": "Bangladesh",
-    "value": "4"
+    "value": "2"
   },
   {
     "source": "Total Asylum Seekers",
@@ -162,72 +152,37 @@
   },
   {
     "source": "Total Asylum Seekers",
-    "target": "Egypt",
-    "value": "2"
-  },
-  {
-    "source": "Total Asylum Seekers",
-    "target": "India",
-    "value": "9"
-  },
-  {
-    "source": "Total Asylum Seekers",
     "target": "Iran",
-    "value": "244"
+    "value": "34"
   },
   {
     "source": "Total Asylum Seekers",
     "target": "Iraq",
-    "value": "48"
-  },
-  {
-    "source": "Total Asylum Seekers",
-    "target": "Jordan",
-    "value": "1"
+    "value": "10"
   },
   {
     "source": "Total Asylum Seekers",
     "target": "Lebanon",
-    "value": "26"
-  },
-  {
-    "source": "Total Asylum Seekers",
-    "target": "Pakistan",
     "value": "4"
   },
   {
     "source": "Total Asylum Seekers",
     "target": "Somalia",
-    "value": "3"
-  },
-  {
-    "source": "Total Asylum Seekers",
-    "target": "Sri Lanka",
-    "value": "6"
-  },
-  {
-    "source": "Total Asylum Seekers",
-    "target": "Sudan",
-    "value": "3"
-  },
-  {
-    "source": "Total Asylum Seekers",
-    "target": "Syria",
     "value": "1"
   },
   {
     "source": "Total Asylum Seekers",
-    "target": "Country Unknown",
-    "value": "29"
+    "target": "Sri Lanka",
+    "value": "2"
   },
   { "source": "Total Asylum Seekers",
-    "target": "Still on PNG or Nauru",
+    "target": "Still on Manus or Nauru",
     "value": "1215" 
   },
   {
     "source": "Total Asylum Seekers",
-    "target": "Location Unknown",
-    "value": "276"
+    "target": "Unknown",
+    "value": "607"
   }
 ],
 
@@ -275,7 +230,7 @@
     "name": "Other People"
   },
   {
-    "name": "PNG"
+    "name": "Manus"
   },
   {
     "name": "Nauru"
@@ -286,20 +241,9 @@
   {
     "name": "Afghanistan"
   },
-  {
-    "name": "Albania"
-  },
-  {
-    "name": "Bangladesh"
-  },
+
   {
     "name": "Cambodia"
-  },
-  {
-    "name": "Egypt"
-  },
-  {
-    "name": "India"
   },
   {
     "name": "Iran"
@@ -308,34 +252,21 @@
     "name": "Iraq"
   },
   {
-    "name": "Jordan"
-  },
-  {
     "name": "Lebanon"
   },
-  {
-    "name": "Pakistan"
-  },
+
   {
     "name": "Somalia"
   },
   {
     "name": "Sri Lanka"
   },
+
   {
-    "name": "Sudan"
+    "name": "Unknown"
   },
   {
-    "name": "Syria"
-  },
-  {
-    "name": "Country Unknown"
-  },
-  {
-    "name": "Still on PNG or Nauru"
-  },
-  {
-    "name": "Location Unknown"
+    "name": "Still on Manus or Nauru"
   }
 
 ] }
