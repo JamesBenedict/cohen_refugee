@@ -253,21 +253,25 @@ article {
 
 #case, #data, .footer {
   visibility: hidden; }
-  #case .textLabelclass, #data .textLabelclass, .footer .textLabelclass {
-    white-space: nowrap;
-    text-shadow: 0 0 0.1em black, 0 0 0.1em black, 0 0 0.1em black,0 0 0.1em black,0 0 0.1em;
-    color: white;
-    font-size: 30px; }
-  #case #refugeeMap, #data #refugeeMap, .footer #refugeeMap {
-    height: 500px; }
-  #case .annotation > path, #data .annotation > path, .footer .annotation > path {
-    stroke: #2a2a2a;
-    stroke-width: 2px;
-    stroke-dasharray: 5;
-    fill: none; }
-  #case .annotation > text, #data .annotation > text, .footer .annotation > text {
-    text-align: left;
-    text-anchor: start; }
+
+.textLabelclass {
+  white-space: nowrap;
+  text-shadow: 0 0 0.1em black, 0 0 0.1em black, 0 0 0.1em black,0 0 0.1em black,0 0 0.1em;
+  color: #b8b8b8;
+  font-size: 30px; }
+
+#refugeeMap {
+  height: 500px; }
+
+.annotation > path {
+  stroke: #2a2a2a;
+  stroke-width: 2px;
+  stroke-dasharray: 5;
+  fill: none; }
+
+.annotation > text {
+  text-align: left;
+  text-anchor: start; }
 
 #byline, #date {
   opacity: .5;

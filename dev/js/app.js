@@ -441,7 +441,7 @@ L.marker([-0.421969, 166.8930322]).addTo(map);
   
 function refugeeMap(){
   var map2 = L.map('refugeeMap', {scrollWheelZoom:false}).setView([16.381008, 67.080770], 4);
-  new L.TileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}').addTo(map2);
+  new L.TileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}').addTo(map2);
   var createLabelIcon = function(labelClass,labelText){
     return L.divIcon({ 
       className: labelClass,

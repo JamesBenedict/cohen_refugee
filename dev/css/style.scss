@@ -309,6 +309,15 @@ article{
 
 #case, #data, .footer{
 	visibility: hidden;
+
+}
+
+.textLabelclass{
+	white-space:nowrap;
+	text-shadow: 0 0 0.1em black, 0 0 0.1em black, 0 0 0.1em black,0 0 0.1em black,0 0 0.1em;
+	color: #b8b8b8;
+	font-size: 30px;
+}	
 	
 // small
 @media (min-width: $sm-min){
@@ -333,12 +342,7 @@ article{
 }
 
 
-.textLabelclass{
-	white-space:nowrap;
-	text-shadow: 0 0 0.1em black, 0 0 0.1em black, 0 0 0.1em black,0 0 0.1em black,0 0 0.1em;
-	color: white;
-	font-size: 30px;
-}	
+
 
 #refugeeMap{
 	height: 500px;
@@ -360,7 +364,7 @@ article{
 }
 
 
-}
+
 
 #byline, #date{
 	opacity: .5;
