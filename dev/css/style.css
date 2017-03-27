@@ -95,7 +95,7 @@ h1 {
   display: inline-block;
   position: relative;
   width: 100%;
-  padding-bottom: 63%;
+  padding-bottom: 100%;
   /* aspect ratio */
   vertical-align: top;
   overflow: hidden; }
@@ -103,6 +103,7 @@ h1 {
 .svg-content-responsive {
   display: inline-block;
   position: absolute;
+  padding-bottom: 100%;
   top: 10px;
   left: 0; }
 
@@ -153,9 +154,9 @@ article {
   #donut #donut-charts {
     display: inline-block;
     position: relative;
-    width: 50%;
-    min-height: 800px;
-    height: 100%;
+    width: 40%;
+    min-height: 750px;
+    height: 90%;
     padding-bottom: 0%;
     /* aspect ratio */
     vertical-align: middle;
@@ -184,7 +185,9 @@ article {
     width: 50%;
     padding-left: 4%;
     margin: 0 auto;
-    margin-top: -13%; }
+    position: relative;
+    margin-top: -52em;
+    margin-bottom: 5em; }
 
 #case #case-text {
   display: inline-block;
