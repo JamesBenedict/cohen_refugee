@@ -274,7 +274,7 @@ function circle(){
                   var thisDonut = charts.select( '.type' + j );
                   thisDonut.select( '.value' ).text( function( donut_d ) {
                     return commas( d.data.val.toFixed() ) +
-                      " persons of concern recieved by " + d.data.cat;
+                      " persons of concern received by " + d.data.cat;
                   } );
                   thisDonut.select( '.percentage' ).text( function( donut_d ) {
                     return ( d.data.val / donut_d.total * 100 ).toFixed( 2 ) + '%';
